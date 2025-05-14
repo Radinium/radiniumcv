@@ -21,7 +21,7 @@ export const RESUME_DATA = {
       Experienced in mechanical design/analysis and team leadership.
     </>
   ),
-  avatarUrl: "src/images/logos/profile.jpg",
+  avatarUrl: "https://avatars.githubusercontent.com/u/51886828?v=4",
   personalWebsiteUrl: "https://www.linkedin.com/in/mhmdafshar/",
   contact: {
     email: "afsharmohammadd@gmail.com",
@@ -54,13 +54,13 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-      company: "Film.io",
-      link: "https://film.io",
-      badges: ["Remote", "React", "Next.js", "TypeScript", "Node.js"],
-      title: "Software Architect",
-      logo: ConsultlyLogo,
+      company: "Beko",
+      link: "www.beko.com.tr",
+      badges: [],
+      title: "Intern",
+      logo: null,
       start: "2024",
-      end: null,
+      end: "2024",
       description: (
         <>
           Leading technical architecture of a blockchain-based film funding
@@ -83,17 +83,11 @@ export const RESUME_DATA = {
     },
   ],
   skills: [
-    "React/Next.js/Remix",
-    "TypeScript",
-    "Tailwind CSS",
-    "Design Systems",
-    "WebRTC",
-    "WebSockets",
-    "Node.js",
-    "GraphQL",
-    "Relay",
-    "System Architecture",
-    "Remote Team Leadership",
+    "Solidworks",
+    "Anssys fluent",
+    "Ansys mechanical",
+    "Python",
+    "C++",
   ],
   projects: [
     {
