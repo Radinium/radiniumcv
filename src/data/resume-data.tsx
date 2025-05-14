@@ -14,7 +14,7 @@ export const RESUME_DATA = {
   location: "Istanbul, Turkey",
   locationLink: "https://www.google.com/maps/place/Istanbul",
   about:
-    "Mechanical Engineer interested in Physical Modelling",
+    "Mechanical Engineer",
   summary: (
     <>
       Frontend-focused Full Stack Engineer specializing in high-performance
@@ -23,11 +23,11 @@ export const RESUME_DATA = {
       leadership.
     </>
   ),
-  avatarUrl: "src\images\logos\profile.jpg",
-  personalWebsiteUrl: "https://radiniumcv.vercel.app/",
+  avatarUrl: "src/images/logos/profile.jpg",
+  personalWebsiteUrl: "https://www.linkedin.com/in/mhmdafshar/",
   contact: {
     email: "afsharmohammadd@gmail.com",
-    tel: "+5392381869",
+    tel: "+905392381869",
     social: [
       {
         name: "GitHub",
@@ -39,21 +39,27 @@ export const RESUME_DATA = {
         url: "https://www.linkedin.com/in/mhmdafshar/",
         icon: LinkedInIcon,
       },
+      {
+        name: "X",
+        url: "https://x.com/",
+        icon: XIcon,
+      },
     ],
   },
   education: [
     {
       school: "Yildiz Technical University",
-      degree: "Bachelor's Degree in Mechanical Engineering",
+      degree: "Bachelor's Degree in Mechanical Engineer",
       start: "2021",
-      end: "2025",
+      end: "2024",
     },
   ],
   work: [
     {
-      company: "Beko",
-      link: "www.beko.com.tr",
-      title: "Intern",
+      company: "Film.io",
+      link: "https://film.io",
+      badges: ["Remote", "React", "Next.js", "TypeScript", "Node.js"],
+      title: "Software Architect",
       logo: ConsultlyLogo,
       start: "2024",
       end: null,
@@ -76,7 +82,7 @@ export const RESUME_DATA = {
           </ul>
         </>
       ),
-    }
+    },
   ],
   skills: [
     "React/Next.js/Remix",
