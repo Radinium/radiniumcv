@@ -10,11 +10,11 @@ import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
   name: "Mohammad Afshar",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
+  initials: "",
+  location: "Istanbul, Turkey",
+  locationLink: "https://www.google.com/maps/place/Istanbul",
   about:
-    "Detail-oriented Full Stack Engineer dedicated to building high-quality products.",
+    "Mechanical Engineer interested in Physical Modelling",
   summary: (
     <>
       Frontend-focused Full Stack Engineer specializing in high-performance
@@ -23,40 +23,33 @@ export const RESUME_DATA = {
       leadership.
     </>
   ),
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+  avatarUrl: "src\images\logos\profile.jpg",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "afsharmohammadd@gmail.com",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/Radinium",
         icon: GitHubIcon,
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://www.linkedin.com/in/mhmdafshar/",
         icon: LinkedInIcon,
-      },
-      {
-        name: "X",
-        url: "https://x.com/BartoszJarocki",
-        icon: XIcon,
       },
     ],
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "Yildiz Technical University",
+      degree: "Bachelor's Degree in Mechanical Engineering",
+      start: "2021",
+      end: "2025",
     },
   ],
   work: [
     {
-      company: "Film.io",
+      company: "Beko",
       link: "https://film.io",
       badges: ["Remote", "React", "Next.js", "TypeScript", "Node.js"],
       title: "Software Architect",
