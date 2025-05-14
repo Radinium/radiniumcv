@@ -17,10 +17,8 @@ export const RESUME_DATA = {
     "Mechanical Engineer",
   summary: (
     <>
-      Frontend-focused Full Stack Engineer specializing in high-performance
-      React applications, scalable Node.js services, and real-time collaboration
-      systems. Experienced in technical architecture design and remote team
-      leadership.
+      Mechanical Engineer specializing in physical modeling using different approaches.
+      Experienced in mechanical design/analysis and team leadership.
     </>
   ),
   avatarUrl: "src/images/logos/profile.jpg",
