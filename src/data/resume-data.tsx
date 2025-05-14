@@ -27,7 +27,7 @@ export const RESUME_DATA = {
   personalWebsiteUrl: null,
   contact: {
     email: "afsharmohammadd@gmail.com",
-    tel: null,
+    tel: "",
     social: [
       {
         name: "GitHub",
@@ -51,10 +51,9 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-      company: "Film.io",
-      link: "https://film.io",
-      badges: ["Remote", "React", "Next.js", "TypeScript", "Node.js"],
-      title: "Software Architect",
+      company: "Beko",
+      link: "www.beko.com.tr",
+      title: "Intern",
       logo: ConsultlyLogo,
       start: "2024",
       end: null,
