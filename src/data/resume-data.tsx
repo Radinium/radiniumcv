@@ -63,19 +63,10 @@ export const RESUME_DATA = {
       end: "2024",
       description: (
         <>
-          Leading technical architecture of a blockchain-based film funding
-          platform.
-          <ul className="list-inside list-disc">
+          produced a differential model for tumble dryer using python.
+          <ul>
             <li>
-              Architecting migration from CRA to Next.js for improved
-              performance, SEO, and DX
-            </li>
-            <li>
-              Established release process enabling faster deployments and
-              reliable rollbacks
-            </li>
-            <li>
-              Implementing system-wide monitoring and security improvements
+              validated the model with experimental data.
             </li>
           </ul>
         </>
@@ -91,45 +82,13 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
-      title: "Monito",
-      techStack: ["TypeScript", "Next.js", "Browser Extension", "PostgreSQL"],
+      title: "Yildiz Rocket Team",
+      techStack: [],
       description:
-        "Browser extension for debugging web applications. Includes taking screenshots, screen recording, E2E tests generation and generating bug reports",
-      logo: MonitoLogo,
+        "Recovery Subteam Leader for 2 years, Developed a low shock satelite separation system",
       link: {
-        label: "monito.dev",
-        href: "https://monito.dev/",
-      },
-    },
-    {
-      title: "Consultly",
-      techStack: [
-        "TypeScript",
-        "Next.js",
-        "Vite",
-        "GraphQL",
-        "WebRTC",
-        "Tailwind CSS",
-        "PostgreSQL",
-        "Redis",
-      ],
-      description:
-        "Platform for online consultations with real-time video meetings and scheduling",
-      logo: ConsultlyLogo,
-      link: {
-        label: "consultly.com",
-        href: "https://consultly.com/",
-      },
-    },
-    {
-      title: "Minimalist CV",
-      techStack: ["TypeScript", "Next.js", "Tailwind CSS"],
-      description:
-        "An open source minimalist, print friendly CV template with a focus on readability and clean design. >9k stars on GitHub",
-      logo: MonitoLogo,
-      link: {
-        label: "Minimalist CV",
-        href: "https://github.com/BartoszJarocki/cv",
+        label: "YRT",
+        href: "https://www.linkedin.com/company/yildizroket/",
       },
     },
   ],
