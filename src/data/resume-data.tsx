@@ -24,7 +24,7 @@ export const RESUME_DATA = {
     </>
   ),
   avatarUrl: "src\images\logos\profile.jpg",
-  personalWebsiteUrl: null,
+  personalWebsiteUrl: "https://radiniumcv.vercel.app/",
   contact: {
     email: "afsharmohammadd@gmail.com",
     tel: "+5392381869",
