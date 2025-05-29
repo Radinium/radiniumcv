@@ -185,9 +185,11 @@ export const RESUME_DATA = {
     {
       title: "Yildiz Rocket Team",
       techStack: [],
-      description:
-        "Led a team of 4 engineering students. Developed a low-shock satellite separation system for ARTAM-1 Rocket. Researched parachute dynamics.",
-      link: {
+      description:(<>
+        Led a team of 4 engineering students. Developed a low-shock satellite separation system for ARTAM-1 Rocket. Researched parachute dynamics.,
+      </>
+      ),
+        link: {
         label: "YRT",
         href: "https://www.linkedin.com/company/yildizroket/",
       },
