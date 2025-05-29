@@ -94,34 +94,107 @@ export const RESUME_DATA = {
     },
   ],
   skills: [
+    "Communication",
+    "Teamwork",
+    "Research",
+    "Problem Solving",
     "SolidWorks",
     "ANSYS Fluent",
     "ANSYS Mechanical",
     "Python",
     "C++",
+    "Data analysis", 
+    "MATLAB",
+    "Project Management",
+    "OpenFOAM",
+    "Machine Learning",
+    "Computational Fluid Dynamics (CFD)",
+  ],
+  languages: [
+    "English (IELTS: C1)",
+    "German (A1)",
+    "Persian (native)",
+    "Turkish (native)",
+  ],
+
+  References: [
+    {
+      title: "Res. Asst. PhD Mustafa Kemal Sevindir",
+      techStack: [],
+      description:
+        "ASHRAE Turkish Chapter Treasurer",
+      link: {
+        label: "Email",
+        href: "sevindir@yildiz.edu.tr",
+      },
+    },
+    {
+      title: "Res. Asst. PhD Özlem Emanet",
+      techStack: [],
+      description:
+        "Dept. of Mechanical Engineering, Yildiz Technical University",
+      link: {
+        label: "Email",
+        href: "panzehir@yildiz.edu.tr",
+      },
+    },
+    {
+      title: "Assoc. Prof. Alp Tekin Ergenç",
+      techStack: [],
+      description:
+        "Dept. of Mechanical Engineering, Yildiz Technical University",
+      link: {
+        label: "Email",
+        href: "aergenc@yildiz.edu.tr",
+      },
+    },
+    {
+      title: "Prof. Özden Ağra",
+      techStack: [],
+      description:
+        "Dept. of Mechanical Engineering, Yildiz Technical University",
+      link: {
+        label: "Email",
+        href: "oagra@yildiz.edu.tr",
+      },
+    },
+  ],
+  Publications: [
+    {
+      title: "3rd International Conference of Energy Systems",
+      techStack: [],
+      description:
+        "Physics-Informed Neural Networks for Rocket Nose Cone Flow Prediction: A Comparative CFD Study",
+      link: {
+        label: "site",
+        href: "https://ices2025conference.com/",
+      },
+    },
+    {
+      title: "7th International Conference on Advances in Mechanical Engineering",
+      techStack: [],
+      description:
+        "Mathematical Modelling and Experimental Investigation of Lf280k Lion Batteries Cooling System with MATLAB.",
+      link: {
+        label: "site",
+        href: "https://icame2024conference.com/",
+      },
+    },
   ],
   projects: [
     {
       title: "Yildiz Rocket Team",
       techStack: [],
       description:
-        "Recovery Subteam Leader for 2 years; developed a low-shock satellite separation system.",
+        "● Led a team of 4 engineering students. Developed a low-shock satellite separation system for ARTAM-1 Rocket. Researched parachute dynamics.",
       link: {
         label: "YRT",
         href: "https://www.linkedin.com/company/yildizroket/",
       },
     },
-  ],
-
-  // —— New sections added from CV PDF —— //
-
-  researchExperience: [
-    {
-      role: "Volunteer Research Assistant",
-      organization: "YTU Arçelik Laboratory",
-      location: "Istanbul",
-      start: "October 2023",
-      end: "July 2025",
+        {
+      title: "Volunteer Research Assistant",
+      techStack: [],
       description: (
         <>
           ● Participated in research on lithium ferrous phosphate batteries behaviour and
@@ -130,12 +203,14 @@ export const RESUME_DATA = {
           tumble dryers using MATLAB.
         </>
       ),
+      link: {
+        label: "YTU Arçelik Laboratory",
+        href: "",
+      },
     },
-    {
-      role: "2209-A Research Student",
-      organization: "TÜBİTAK",
-      location: "Istanbul",
-      start: "November 2022",
+        {
+      title: "2209-A Research Student",
+      techStack: [],
       end: "October 2023",
       description: (
         <>
@@ -143,89 +218,51 @@ export const RESUME_DATA = {
           for jungle fire protection.
         </>
       ),
+       link: {
+        label: "TÜBİTAK",
+        href: "https://tubitak.gov.tr/tr/burslar/lisans-onlisans/destek-programlari/2209-universite-ogrencileri-arastirma-projeleri-destekleme-programi",
+      },
     },
-  ], // :contentReference[oaicite:0]{index=0}
-
-  conferences: [
-    {
-      name: "7th International Conference on Advances in Mechanical Engineering",
-      presentation:
-        'Co-authored and presented “Mathematical Modelling and Experimental Investigation of Lf280k Lion Batteries Cooling System with MATLAB.”',
+  {
+      title: "Student Representative",
+      techStack: [],
+      end: "October 2023",
+      description: (
+        <>
+          Transferred students’ needs to faculty.
+        </>
+      ),
+       link: {
+        label: "Yildiz Technical University",
+        href: "",
+      },
     },
-    {
-      name: "3rd International Conference of Energy Systems",
-      presentation:
-        'Co-authored and presented “Physics-Informed Neural Networks for Rocket Nose Cone Flow Prediction: A Comparative CFD Study” (also the topic of my thesis).',
+      {
+      title: "ASHRAE Turkish Chapter Student Branch Vice President",
+      techStack: [],
+      description: (
+        <>
+          Attended and organized seminars.
+        </>
+      ),
+       link: {
+        label: "ASHRAE Turkish Chapter",
+        href: "",
+      },
     },
-  ], // :contentReference[oaicite:1]{index=1}
-
-  additionalInformation: {
-    funding: "DAFI scholarship for 3 years", // :contentReference[oaicite:2]{index=2}
-    languages: [
-      "English (IELTS: C1)",
-      "German (A1)",
-      "Persian (native)",
-      "Turkish (native)",
-    ],
-    certifications: [
-      "Data analysis, machine learning and scientific computing certification with Python, C++",
-      "Project Management certification from Google",
-    ],
-    softSkills: [
-      "Communication",
-      "Teamwork",
-      "Research",
-      "Problem Solving",
-    ],
-    martialArts: "Taekwondo Red Belt",
-  }, // :contentReference[oaicite:3]{index=3}
-
-  volunteering: [
-    {
-      role: "Student Representative",
-      details: "Transferred students’ needs to faculty.",
+{
+      title: "Organization Team Member",
+      techStack: [],
+      description: (
+        <>
+        Managed social media.,
+        Designed posters.,
+        </>
+      ),
+       link: {
+        label: ", YTU MAKTEK",
+        href: "",
+      },
     },
-    {
-      role: "ASHRAE Turkish Chapter Student Branch Vice President",
-      details: "Attended and organized seminars.",
-    },
-    {
-      role: "Recovery Sub-team Lead, Yildiz Rocket Team",
-      details: [
-        "Developed a low-shock satellite separation system for ARTAM-1 Rocket.",
-        "Led a team of 4 engineering students.",
-        "Researched parachute dynamics.",
-      ],
-    },
-    {
-      role: "Organization Team Member, YTU MAKTEK",
-      details: [
-        "Managed social media.",
-        "Designed posters.",
-      ],
-    },
-  ], // :contentReference[oaicite:4]{index=4}
-
-  references: [
-    {
-      name: "Prof. Özden Ağra",
-      title: "Dept. of Mechanical Engineering, Yildiz Technical University",
-      email: "oagra@yildiz.edu.tr",
-    },
-    {
-      name: "Assoc. Prof. Alp Tekin Ergenç",
-      title: "Dept. of Mechanical Engineering, Yildiz Technical University",
-      email: "aergenc@yildiz.edu.tr",
-    },
-    {
-      name: "Res. Asst. PhD Özlem Emanet",
-      title: "Dept. of Mechanical Engineering, Yildiz Technical University",
-      email: "panzehir@yildiz.edu.tr",
-    },
-    {
-      name: "Res. Asst. PhD Mustafa Kemal Sevindir",
-      title: "ASHRAE Turkish Chapter Treasurer",
-      email: "sevindir@yildiz.edu.tr",
-    },
-  ], // :contentReference[oaicite:5]{index=5}
+  ],
 } as const;
