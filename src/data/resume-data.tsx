@@ -55,11 +55,7 @@ export const RESUME_DATA = {
       description: (
         <>
           ●	Involved in the construction of a multidomain simulation model of a heat pump tumble dryer through python.
-          <ul>
-            <li>
-              validated the model with experimental data.
-            </li>
-          </ul>
+          ● Validated the model with experimental data.
         </>
       ),
     },
@@ -72,9 +68,8 @@ export const RESUME_DATA = {
       end: "2025",
       description: (
         <>
-          Coursework including thermodynamics, heat transfer, fluid dynamics, vibrations, strength of materials, and dynamics.  I also completed foundational studies in computer science (C programming), mathematics (calculus, linear algebra, differential equations), and related areas such as statistics, numerical analysis, and finite element methods.
-          Developed critical thinking and analytical skills to counter engineering problems.
-
+          ● Coursework including thermodynamics, heat transfer, fluid dynamics, vibrations, strength of materials, and dynamics.  I also completed foundational studies in computer science (C programming), mathematics (calculus, linear algebra, differential equations), and related areas such as statistics, numerical analysis, and finite element methods.
+          ● Developed critical thinking and analytical skills to counter engineering problems.
         </>
       ),
     },
@@ -85,9 +80,9 @@ export const RESUME_DATA = {
       end: "2021",
       description: (
         <>
-        Graduated first place with honour.
-        Relevant courses technical drawing, basic mechanics, hydraulics, automatic control, circuits, microcontrollers.
-        Participated in many small projects.
+        ● Graduated first place with honour.
+        ● Relevant courses technical drawing, basic mechanics, hydraulics, automatic control, circuits, microcontrollers.
+        ● Participated in many small projects.
         </>
       ),
     },
