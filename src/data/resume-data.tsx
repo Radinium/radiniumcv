@@ -17,8 +17,7 @@ export const RESUME_DATA = {
     "Mechanical Engineer",
   summary: (
     <>
-      Mechanical Engineer specializing in physical modeling using different approaches.
-      Experienced in mechanical design/analysis and team leadership.
+      Motivated Mechanical Engineering graduate with hands-on experience in thermal systems, computational fluid dynamics (CFD), and machine learning applications in engineering. Co-authored and presented papers at international conferences on battery cooling and physics-informed neural networks for aerodynamic prediction. Skilled in MATLAB, Python, and simulation tools such as ANSYS and OpenFOAM, with a record in interdisciplinary research and team leadership. Actively pursuing opportunities to contribute to engineering projects in a global context.
     </>
   ),
   avatarUrl: "https://avatars.githubusercontent.com/u/51886828?v=4",
@@ -44,14 +43,6 @@ export const RESUME_DATA = {
       },
     ],
   },
-  education: [
-    {
-      school: "Yildiz Technical University",
-      degree: "Bachelor's Degree in Mechanical Engineer",
-      start: "2021",
-      end: "2024",
-    },
-  ],
   work: [
     {
       company: "Beko",
@@ -63,12 +54,40 @@ export const RESUME_DATA = {
       end: "2024",
       description: (
         <>
-          produced a differential model for tumble dryer using python.
+          ●	Involved in the construction of a multidomain simulation model of a heat pump tumble dryer through python.
           <ul>
             <li>
               validated the model with experimental data.
             </li>
           </ul>
+        </>
+      ),
+    },
+  ],
+  education: [
+    {
+      school: "Yildiz Technical University",
+      degree: "Bachelor's Degree in Mechanical Engineer",
+      start: "2021",
+      end: "2025",
+      description: (
+        <>
+          Coursework including thermodynamics, heat transfer, fluid dynamics, vibrations, strength of materials, and dynamics.  I also completed foundational studies in computer science (C programming), mathematics (calculus, linear algebra, differential equations), and related areas such as statistics, numerical analysis, and finite element methods.
+          Developed critical thinking and analytical skills to counter engineering problems.
+
+        </>
+      ),
+    },
+    {
+      school: "AOSB Rahmiye Sare Palali Anatolian Technical High School",
+      degree: "Mechatroincs Technician",
+      start: "2017",
+      end: "2021",
+      description: (
+        <>
+        Graduated first place with honour.
+        Relevant courses technical drawing, basic mechanics, hydraulics, automatic control, circuits, microcontrollers.
+        Participated in many small projects.
         </>
       ),
     },
