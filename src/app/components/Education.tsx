@@ -29,9 +29,9 @@ interface EducationItemProps {
 
 /**
  * Individual education card component
- */
+ *///
 function EducationItem({ education }: EducationItemProps) {
-  const { school, start, end, degree } = education;
+  const { school, start, end, degree, description } = education;
 
   return (
     <Card>
@@ -53,11 +53,12 @@ function EducationItem({ education }: EducationItemProps) {
           .replace(/\s+/g, "-")}`}
       >
         {degree}
+        {/* Render the description below the degree */}
+        <div className="mt-2">{description}</div>
       </CardContent>
     </Card>
   );
 }
-
 interface EducationListProps {
   education: readonly Education[];
 }
