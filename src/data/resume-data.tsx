@@ -54,9 +54,9 @@ export const RESUME_DATA = {
       end: "August 2024",
       description: (
         <>
-          ● Involved in the construction of a multidomain simulation model of a heat pump
+          Involved in the construction of a multidomain simulation model of a heat pump
           tumble dryer through Python.<br />
-          ● Validated the model with experimental data.
+          Validated the model with experimental data.
         </>
       ),
     },
@@ -69,11 +69,11 @@ export const RESUME_DATA = {
       end: "July 2025",
       description: (
         <>
-          ● GPA: 2.9/4<br />
-          ● Coursework: thermodynamics, heat transfer, fluid dynamics, vibrations, strength
+          GPA: 2.9/4<br />
+          Coursework: thermodynamics, heat transfer, fluid dynamics, vibrations, strength
           of materials, dynamics; plus C programming, calculus, linear algebra,
           differential equations, statistics, numerical analysis, and finite element methods.<br />
-          ● Developed critical thinking and analytical skills to tackle engineering problems.
+          Developed critical thinking and analytical skills to tackle engineering problems.
         </>
       ),
     },
@@ -84,11 +84,11 @@ export const RESUME_DATA = {
       end: "July 2021",
       description: (
         <>
-          ● GPA: 96.8/100<br />
-          ● Graduated first place with honour.<br />
-          ● Relevant coursework: technical drawing, basic mechanics, hydraulics, automatic
+          GPA: 96.8/100<br />
+          Graduated first place with honour.<br />
+          Relevant coursework: technical drawing, basic mechanics, hydraulics, automatic
           control, circuits, microcontrollers.<br />
-          ● Participated in many small projects.
+          Participated in many small projects.
         </>
       ),
     },
@@ -186,7 +186,7 @@ export const RESUME_DATA = {
       title: "Yildiz Rocket Team",
       techStack: [],
       description:
-        "● Led a team of 4 engineering students. Developed a low-shock satellite separation system for ARTAM-1 Rocket. Researched parachute dynamics.",
+        "Led a team of 4 engineering students. Developed a low-shock satellite separation system for ARTAM-1 Rocket. Researched parachute dynamics.",
       link: {
         label: "YRT",
         href: "https://www.linkedin.com/company/yildizroket/",
@@ -197,9 +197,9 @@ export const RESUME_DATA = {
       techStack: [],
       description: (
         <>
-          ● Participated in research on lithium ferrous phosphate batteries behaviour and
+          Participated in research on lithium ferrous phosphate batteries behaviour and
           thermal cooling systems, culminating in a seminar presentation.<br />
-          ● Conducted simulation-based thermodynamics and heat-transfer studies for heat pump
+          Conducted simulation-based thermodynamics and heat-transfer studies for heat pump
           tumble dryers using MATLAB.
         </>
       ),
@@ -214,7 +214,7 @@ export const RESUME_DATA = {
       end: "October 2023",
       description: (
         <>
-          ● Researched unmanned aerial vehicles using classification machine learning algorithms
+          Researched unmanned aerial vehicles using classification machine learning algorithms
           for jungle fire protection.
         </>
       ),
