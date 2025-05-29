@@ -80,7 +80,7 @@ function ProjectTags({ tags }: ProjectTagsProps) {
 
 interface ProjectCardProps {
   title: string;
-  description: string;
+  description: React.ReactNode;
   tags: ProjectTags;
   link?: string;
 }
