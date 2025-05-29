@@ -17,7 +17,11 @@ export const RESUME_DATA = {
     "Mechanical Engineer",
   summary: (
     <>
-      Motivated Mechanical Engineering graduate with hands-on experience in thermal systems, computational fluid dynamics (CFD), and machine learning applications in engineering. Co-authored and presented papers at international conferences on battery cooling and physics-informed neural networks for aerodynamic prediction. Skilled in MATLAB, Python, and simulation tools such as ANSYS and OpenFOAM, with a record in interdisciplinary research and team leadership. Actively pursuing opportunities to contribute to engineering projects in a global context.
+      Motivated Mechanical Engineering graduate with hands-on experience in thermal systems,
+      computational fluid dynamics (CFD), and machine learning applications in engineering. 
+      Co-authored and presented papers at international conferences on battery cooling and physics-informed neural networks for aerodynamic prediction. 
+      Skilled in MATLAB, Python, and simulation tools such as ANSYS and OpenFOAM, with a record in interdisciplinary research and team leadership. 
+      Actively pursuing opportunities to contribute to engineering projects in a global context.
     </>
   ),
   avatarUrl: "https://avatars.githubusercontent.com/u/51886828?v=4",
@@ -35,11 +39,6 @@ export const RESUME_DATA = {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/mhmdafshar/",
         icon: LinkedInIcon,
-      },
-      {
-        name: "X",
-        url: "https://x.com/",
-        icon: XIcon,
       },
     ],
   },

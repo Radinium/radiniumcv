@@ -34,6 +34,9 @@ export class Education {
 
   @Field(() => String)
   end: string;
+  
+  @Field(() => String)
+  description: string;
 }
 
 @ObjectType()
