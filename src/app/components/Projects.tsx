@@ -46,7 +46,7 @@ function ProjectLink({ href }: ProjectLinkProps) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1 text-xs font-medium text-blue-600 hover:underline"
+      className="inline-flex items-center gap-1 text-xs font-medium text-slate-800 hover:text-blue-900 hover:underline"
       aria-label={`Open project link (${domain}) in new tab`}
     >
       Link
@@ -68,7 +68,7 @@ function ProjectTags({ tags }: ProjectTagsProps) {
     >
       {tags.map((tag) => (
         <li key={tag}>
-          <span className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-800">
+          <span className="rounded bg-blue-50 px-2 py-1 text-xs text-blue-700">
             {tag}
           </span>
         </li>
@@ -89,7 +89,7 @@ function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
 
   return (
     <Card
-      className="flex h-full flex-col overflow-hidden border p-3"
+      className="flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
       role="article"
     >
       <CardHeader>
