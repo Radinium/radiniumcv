@@ -9,61 +9,53 @@ import {
 import { Section } from "../../components/ui/section";
 import { RESUME_DATA } from "../../data/resume-data";
 
-type ReferenceTags = readonly string[];
+type PublicationTags = readonly string[];
 
-interface ReferenceLinkProps {
-  title: string;
-  link?: string;
+function cleanTrailingComma(value: string) {
+  return value.trim().replace(/,+$/, "");
 }
 
-/**
- * Renders Reference title with optional link and status indicator
- */
-function ReferenceLink({ title, link }: ReferenceLinkProps) {
-  if (!link) {
-    return <span>{title}</span>;
+function getLinkDomain(href: string) {
+  try {
+    return new URL(href).hostname.replace(/^www\./, "");
+  } catch {
+    return "Link";
+  }
+}
+
+interface PublicationLinkProps {
+  href?: string;
+}
+
+function PublicationLink({ href }: PublicationLinkProps) {
+  if (!href) {
+    return null;
   }
 
+  const domain = getLinkDomain(href);
+
   return (
-    <>
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 hover:underline"
-        aria-label={`${title} Reference (opens in new tab)`}
-      >
-        {title}
-        <span
-          className="size-1 rounded-full bg-green-500"
-          aria-label="Active Reference indicator"
-        />
-      </a>
-      <div
-        className="hidden font-mono text-xs underline print:visible"
-        aria-hidden="true"
-      >
-        {link.replace("https://", "").replace("www.", "").replace("/", "")}
-      </div>
-    </>
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1 text-xs font-medium text-blue-600 hover:underline"
+      aria-label={`Open publication link (${domain}) in new tab`}
+    >
+      {domain}
+    </a>
   );
 }
 
-interface ReferenceTagsProps {
-  tags: ReferenceTags;
+interface PublicationTagsProps {
+  tags: PublicationTags;
 }
 
-/**
- * Renders a list of technology tags used in the Reference
- */
-function ReferenceTags({ tags }: ReferenceTagsProps) {
+function PublicationTags({ tags }: PublicationTagsProps) {
   if (tags.length === 0) return null;
 
   return (
-    <ul
-      className="mt-2 flex list-none flex-wrap gap-1 p-0"
-      aria-label="Technologies used"
-    >
+    <ul className="mt-2 flex list-none flex-wrap gap-1 p-0" aria-label="Tech stack">
       {tags.map((tag) => (
         <li key={tag}>
           <Badge
@@ -78,17 +70,14 @@ function ReferenceTags({ tags }: ReferenceTagsProps) {
   );
 }
 
-interface ReferenceCardProps {
+interface PublicationCardProps {
   title: string;
   description: string;
-  tags: ReferenceTags;
+  tags: PublicationTags;
   link?: string;
 }
 
-/**
- * Card component displaying Reference information
- */
-function ReferenceCard({ title, description, tags, link }: ReferenceCardProps) {
+function PublicationCard({ title, description, tags, link }: PublicationCardProps) {
   return (
     <Card
       className="flex h-full flex-col overflow-hidden border p-3"
@@ -96,19 +85,26 @@ function ReferenceCard({ title, description, tags, link }: ReferenceCardProps) {
     >
       <CardHeader>
         <div className="space-y-1">
-          <CardTitle className="text-base">
-            <ReferenceLink title={title} link={link} />
-          </CardTitle>
+          <CardTitle className="text-base">{title}</CardTitle>
           <CardDescription
             className="text-pretty font-mono text-xs print:text-[10px]"
-            aria-label="Reference description"
+            aria-label="Publication description"
           >
-            {description}
+            {cleanTrailingComma(description)}
           </CardDescription>
+          <PublicationLink href={link} />
+          {link && (
+            <div
+              className="hidden font-mono text-xs underline print:visible"
+              aria-hidden="true"
+            >
+              {getLinkDomain(link)}
+            </div>
+          )}
         </div>
       </CardHeader>
       <CardContent className="mt-auto flex">
-        <ReferenceTags tags={tags} />
+        <PublicationTags tags={tags} />
       </CardContent>
     </Card>
   );
@@ -118,9 +114,6 @@ interface PublicationsProps {
   Publications: (typeof RESUME_DATA)["Publications"];
 }
 
-/**
- * Section component displaying all side Publications
- */
 export function Publications({ Publications }: PublicationsProps) {
   return (
     <Section className="print-force-new-page scroll-mb-16 print:space-y-4 print:pt-12">
@@ -132,16 +125,13 @@ export function Publications({ Publications }: PublicationsProps) {
         role="feed"
         aria-labelledby="side-Publications"
       >
-        {Publications.map((Reference) => (
-          <article
-            key={Reference.title}
-            className="h-full" // Added h-full here
-          >
-            <ReferenceCard
-              title={Reference.title}
-              description={Reference.description}
-              tags={Reference.techStack}
-              link={"link" in Reference ? Reference.link.href : undefined}
+        {Publications.map((publication) => (
+          <article key={publication.title} className="h-full">
+            <PublicationCard
+              title={publication.title}
+              description={publication.description}
+              tags={publication.techStack}
+              link={"link" in publication ? publication.link.href : undefined}
             />
           </article>
         ))}
