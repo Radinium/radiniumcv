@@ -2,6 +2,8 @@
 import { ImageResponse } from "next/og";
 import { RESUME_DATA } from "../data/resume-data";
 
+export const runtime = "edge";
+
 export const alt = "Minimalist Resume";
 export const size = {
   width: 1200,
@@ -21,7 +23,7 @@ export default async function Image() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          fontFamily: "sans-serif",
+          fontFamily: '"Inter"',
         }}
       >
         <div
@@ -33,23 +35,16 @@ export default async function Image() {
             textAlign: "center",
           }}
         >
-          <div
+          <img
+            src={RESUME_DATA.avatarUrl}
+            alt={RESUME_DATA.name}
             style={{
               width: "150px",
               height: "150px",
               borderRadius: "10%",
               marginBottom: "2rem",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: "3rem",
-              fontWeight: "bold",
-              color: "#333",
-              background: "#f3f4f6",
             }}
-          >
-            {RESUME_DATA.initials}
-          </div>
+          />
           <div
             style={{
               fontSize: "3rem",

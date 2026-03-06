@@ -1,87 +1,67 @@
 ![cv](https://github.com/BartoszJarocki/cv/assets/1017620/79bdb9fc-0b20-4d2c-aafe-0526ad4a71d2)
 
-# Radinium CV
+# Minimalist CV [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBartoszJarocki%2Fcv)
 
-Simple web app that renders a minimalist, print-friendly CV.
+Simple web app that renders minimalist CV with print-friendly layout.
 
 Built with Next.js and shadcn/ui, deployed on Vercel.
 
-## Features
+# Features
 
-- Single resume config file: [`src/data/resume-data.tsx`](./src/data/resume-data.tsx)
-- Next.js 14 + React + TypeScript + Tailwind + shadcn/ui
-- Responsive layout
-- Print-friendly output
-- Open Graph image route for social sharing
+- Setup only takes a few minutes [single config file](./src/data/resume-data.tsx)
+- Built using Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
+- Auto generated Layout
+- Responsive for different devices
+- Optimized for Next.js and Vercel
 
-## Getting Started Locally
+# Getting Started Locally
 
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/Radinium/radiniumcv.git
-   ```
-
-2. Move to the project directory:
+1. Clone this repository to your local machine:
 
    ```bash
-   cd radiniumcv
+   git clone https://github.com/BartoszJarocki/cv.git
    ```
 
-3. Install dependencies (**Yarn only**):
+2. Move to the cloned directory
+
+   ```bash
+   cd cv
+   ```
+
+3. Install dependencies:
 
    ```bash
    yarn install
    ```
 
-4. Start the development server:
+4. Start the local Server:
 
    ```bash
    yarn dev
    ```
 
-5. Open [`src/data/resume-data.tsx`](./src/data/resume-data.tsx) and customize your resume.
+5. Open the [Config file](./src/data/resume-data.tsx) and make changes
 
-## Vercel Deployment Notes
+# Run with Docker
 
-To avoid metadata warnings and ensure correct social URL generation, set:
+Build the container
 
-- `NEXT_PUBLIC_SITE_URL` = your production site URL (for example `https://radiniumcv.vercel.app`)
-
-Example:
-
-```bash
-NEXT_PUBLIC_SITE_URL=https://radiniumcv.vercel.app
 ```
-
-## Package Manager Consistency
-
-This project is managed with **Yarn**. To avoid lockfile warnings, keep only:
-
-- `yarn.lock`
-
-Do not commit npm lockfiles (such as `package-lock.json`).
-
-## Run with Docker
-
-Build the container:
-
-```bash
 docker compose build
 ```
 
-Run the container:
+Run the container
 
-```bash
+```
 docker compose up -d
 ```
 
-Stop the container:
+Stop the Container
 
-```bash
-docker compose down
+```
+docker compose down 
 ```
 
-## License
+# License
 
 [MIT](https://choosealicense.com/licenses/mit/)

@@ -1,12 +1,58 @@
+import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/ui/section";
+import { cn } from "@/lib/utils";
 
-type SkillGroup = {
-  category: string;
-  items: readonly string[];
-};
+type Skills = readonly string[];
+
+const SKILL_CATEGORIES = {
+  "Engineering Software": [
+    "SolidWorks",
+    "Autodesk Inventor",
+    "HYPERMILL",
+    "ANSYS",
+    "OpenFOAM",
+    "MATLAB/Simulink",
+    "Computational Fluid Dynamics (CFD)",
+    "Finite Element Analysis (FEA)",
+    "Thermal Management Simulation",
+    "3D Modeling & CNC Milling",
+    "GD&T / CMM Part Inspection",
+  ],
+  "Programming & Data": ["Python", "C++", "C", "Machine Learning (PINNs)"],
+  "Soft Skills": [
+    "Communication",
+    "Teamwork",
+    "Research",
+    "Problem Solving",
+    "Project Management",
+  ],
+} as const;
+
+interface SkillsListProps {
+  skills: Skills;
+  className?: string;
+  ariaLabel?: string;
+}
+
+function SkillsList({ skills, className, ariaLabel }: SkillsListProps) {
+  return (
+    <ul
+      className={cn("flex list-none flex-wrap gap-1 p-0", className)}
+      aria-label={ariaLabel ?? "List of skills"}
+    >
+      {skills.map((skill) => (
+        <li key={skill}>
+          <Badge className="print:text-[10px]" aria-label={`Skill: ${skill}`}>
+            {skill}
+          </Badge>
+        </li>
+      ))}
+    </ul>
+  );
+}
 
 interface SkillsProps {
-  skills: readonly SkillGroup[];
+  skills: Skills;
   className?: string;
 }
 
@@ -28,7 +74,7 @@ function categorizeSkills(skills: Skills) {
 
 /**
  * Skills section component
- * Displays skill categories with chip-style items
+ * Displays categorized professional skills as badges
  */
 export function Skills({ skills, className }: SkillsProps) {
   const groupedSkills = categorizeSkills(skills);
@@ -38,21 +84,11 @@ export function Skills({ skills, className }: SkillsProps) {
       <h2 className="text-xl font-bold" id="skills-section">
         Skills
       </h2>
-
-      <div className="space-y-4" aria-labelledby="skills-section">
-        {skills.map((group) => (
-          <div key={group.category} className="space-y-2">
-            <h3 className="text-sm font-semibold text-foreground/70">{group.category}</h3>
-            <div className="flex flex-wrap gap-1.5" aria-label={`${group.category} skills`}>
-              {group.items.map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-800"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
+      <div className="space-y-3" aria-labelledby="skills-section">
+        {groupedSkills.map((group) => (
+          <div key={group.title} className="space-y-1">
+            <h3 className="text-sm font-semibold text-foreground/80">{group.title}</h3>
+            <SkillsList skills={group.items} ariaLabel={`${group.title} skills`} />
           </div>
         ))}
       </div>
