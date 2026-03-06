@@ -88,15 +88,6 @@ export class Project {
 }
 
 @ObjectType()
-export class SkillGroup {
-  @Field(() => String)
-  category: string;
-
-  @Field(() => [String])
-  items: string[];
-}
-
-@ObjectType()
 export class Me {
   @Field(() => String)
   name: string;
@@ -131,8 +122,8 @@ export class Me {
   @Field(() => [Work])
   work: Work[];
 
-  @Field(() => [SkillGroup])
-  skills: SkillGroup[];
+  @Field(() => [String])
+  skills: string[];
 
   @Field(() => [Project])
   projects: Project[];
