@@ -271,11 +271,10 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "ASHRAE Turkish Chapter Student Branch Vice President", // [cite: 65]
+      title: "YTU ASHRAE Turkish Chapter Student Branch Vice President", // [cite: 65]
       techStack: [],
       description: (
         <>
-          Attended and organized seminars.
         </>
       ),
       link: {
@@ -284,7 +283,7 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Organization Team Member",
+      title: "MAKTEK Organization Team Member",
       techStack: [],
       description: (
         <>
