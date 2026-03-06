@@ -1,67 +1,79 @@
-![cv](https://github.com/BartoszJarocki/cv/assets/1017620/79bdb9fc-0b20-4d2c-aafe-0526ad4a71d2)
+# Mohammad Afshar — Interactive CV
 
-# Minimalist CV [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBartoszJarocki%2Fcv)
+A personal, web-based CV built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **shadcn/ui**.
 
-Simple web app that renders minimalist CV with print-friendly layout.
+This project is my online resume and portfolio, including:
 
-Built with Next.js and shadcn/ui, deployed on Vercel.
+- Professional summary and contact links
+- Work experience and education
+- Categorized skills
+- Publications and projects
+- Print-friendly layout and Open Graph preview image
 
-# Features
+## Live Deployment
 
-- Setup only takes a few minutes [single config file](./src/data/resume-data.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
-- Auto generated Layout
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+Deploy on Vercel and set:
 
-# Getting Started Locally
+- `NEXT_PUBLIC_SITE_URL=https://your-domain.vercel.app`
 
-1. Clone this repository to your local machine:
+This ensures social metadata (Open Graph/Twitter cards) resolves correctly.
 
-   ```bash
-   git clone https://github.com/BartoszJarocki/cv.git
-   ```
+## Tech Stack
 
-2. Move to the cloned directory
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- GraphQL (Apollo + type-graphql)
 
-   ```bash
-   cd cv
-   ```
+## Project Structure
 
-3. Install dependencies:
+- `src/data/resume-data.tsx` — Main CV content
+- `src/app/components/*` — UI sections (Header, Skills, Projects, Publications, etc.)
+- `src/app/page.tsx` — Main CV page + metadata
+- `src/app/opengraph-image.tsx` — Generated OG image
+- `src/app/graphql/route.ts` — GraphQL endpoint
 
-   ```bash
-   yarn install
-   ```
+## Local Development
 
-4. Start the local Server:
+> This repository uses **Yarn** as the package manager.
 
-   ```bash
-   yarn dev
-   ```
-
-5. Open the [Config file](./src/data/resume-data.tsx) and make changes
-
-# Run with Docker
-
-Build the container
-
+```bash
+yarn install
+yarn dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Build & Lint
+
+```bash
+yarn lint
+yarn build
+```
+
+## Customize My CV Content
+
+All core resume content is in:
+
+- `src/data/resume-data.tsx`
+
+Update this file to modify profile details, experience, skills, projects, publications, and references.
+
+## Docker (Optional)
+
+```bash
 docker compose build
-```
-
-Run the container
-
-```
 docker compose up -d
 ```
 
-Stop the Container
+Stop:
 
+```bash
+docker compose down
 ```
-docker compose down 
-```
 
-# License
+## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+MIT

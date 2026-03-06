@@ -1,43 +1,18 @@
-import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/ui/section";
-import { RESUME_DATA } from "@/data/resume-data";
-import { cn } from "@/lib/utils";
 
-type Skills = readonly string[];
-
-interface SkillsListProps {
-  skills: Skills;
-  className?: string;
-}
-
-/**
- * Renders a list of skills as badges
- */
-function SkillsList({ skills, className }: SkillsListProps) {
-  return (
-    <ul
-      className={cn("flex list-none flex-wrap gap-1 p-0", className)}
-      aria-label="List of skills"
-    >
-      {skills.map((skill) => (
-        <li key={skill}>
-          <Badge className="print:text-[10px]" aria-label={`Skill: ${skill}`}>
-            {skill}
-          </Badge>
-        </li>
-      ))}
-    </ul>
-  );
-}
+type SkillGroup = {
+  category: string;
+  items: readonly string[];
+};
 
 interface SkillsProps {
-  skills: Skills;
+  skills: readonly SkillGroup[];
   className?: string;
 }
 
 /**
  * Skills section component
- * Displays a list of professional skills as badges
+ * Displays skill categories with chip-style items
  */
 export function Skills({ skills, className }: SkillsProps) {
   return (
@@ -45,7 +20,24 @@ export function Skills({ skills, className }: SkillsProps) {
       <h2 className="text-xl font-bold" id="skills-section">
         Skills
       </h2>
-      <SkillsList skills={skills} aria-labelledby="skills-section" />
+
+      <div className="space-y-4" aria-labelledby="skills-section">
+        {skills.map((group) => (
+          <div key={group.category} className="space-y-2">
+            <h3 className="text-sm font-semibold text-foreground/70">{group.category}</h3>
+            <div className="flex flex-wrap gap-1.5" aria-label={`${group.category} skills`}>
+              {group.items.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-800"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </Section>
   );
 }

@@ -1,13 +1,14 @@
 import { Analytics } from "@vercel/analytics/react";
-import { Inter } from "next/font/google";
+import { Metadata } from "next";
 
 import "./globals.css";
 import React from "react";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-});
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://radiniumcv.vercel.app";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+};
 
 export default function RootLayout({
   children,
@@ -15,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en">
       <body>{children}</body>
       <Analytics />
     </html>

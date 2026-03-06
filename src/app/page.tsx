@@ -11,7 +11,10 @@ import { Languages } from "./components/Languages";
 import { References } from "./components/References";
 import { Publications } from "./components/Publications";
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://radiniumcv.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: `${RESUME_DATA.name} - Resume`,
   description: RESUME_DATA.about,
   openGraph: {
@@ -21,7 +24,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://cv.jarocki.me/opengraph-image",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: `${RESUME_DATA.name}'s profile picture`,
@@ -32,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${RESUME_DATA.name} - Resume`,
     description: RESUME_DATA.about,
-    images: ["https://cv.jarocki.me/opengraph-image"],
+    images: ["/opengraph-image"],
   },
 };
 

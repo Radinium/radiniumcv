@@ -9,27 +9,23 @@ import {
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
 
 export const RESUME_DATA = {
-  name: "Mohammad Afshar",
+  name: "Mohammad Afshar", // [cite: 1]
   initials: "MA",
   location: "Istanbul, Turkey",
   locationLink: "https://www.google.com/maps/place/Istanbul",
-  about: "Mechanical Engineer",
+  about: "Mechanical Engineer - CAE/CFD / R&D", // [cite: 2]
   summary: (
     <>
-      Motivated Mechanical Engineering graduate with hands-on experience in thermal
-      systems, computational fluid dynamics (CFD), and machine learning applications
-      in engineering. Co-authored and presented papers at international conferences on
-      battery cooling and physics-informed neural networks for aerodynamic prediction.
-      Skilled in MATLAB, Python, and simulation tools such as ANSYS and OpenFOAM, with
-      a record in interdisciplinary research and team leadership. Actively pursuing
-      opportunities to contribute to engineering projects in a global context.
+      Mechanical Engineer specializing in computational engineering, CAE, and simulation-driven R&D. {/* [cite: 7] */}
+      Strong background in CFD, FEA, thermal management, and Python-based modelling, with experience on application of Machine Learning to engineering problems. {/* [cite: 8] */}
+      Published author in peer-reviewed national journals and international conferences. Seeking a Design, CAE, or R&D Engineer role. {/* [cite: 9] */}
     </>
   ),
   avatarUrl: "https://avatars.githubusercontent.com/u/51886828?v=4",
   personalWebsiteUrl: "https://www.linkedin.com/in/mhmdafshar/",
   contact: {
-    email: "afsharmohammadd@gmail.com",
-    tel: "+905392381869",
+    email: "afsharmohammadd@gmail.com", // [cite: 4]
+    tel: "+905392381869", // [cite: 3]
     social: [
       {
         name: "GitHub",
@@ -38,91 +34,145 @@ export const RESUME_DATA = {
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/mhmdafshar/",
+        url: "https://www.linkedin.com/in/mhmdafshar/", // [cite: 5]
         icon: LinkedInIcon,
       },
     ],
   },
   work: [
     {
-      company: "Beko",
-      link: "https://www.beko.com.tr",
+      company: "Rivon/Freelance", // [cite: 11]
+      link: "",
       badges: [],
-      title: "Research and Development Engineering Intern",
+      title: "Simulation & Prototyping Engineer", // [cite: 11]
       logo: null,
-      start: "July 2024",
-      end: "August 2024",
+      start: "Jan 2026", // [cite: 13]
+      end: "Present", // [cite: 13]
       description: (
         <>
-          Involved in the construction of a multidomain simulation model of a heat pump
-          tumble dryer through Python.<br />
-          Validated the model with experimental data.
+          Performed structural validation (FEA) and design optimization for functional 3D printed mechanical components. {/* [cite: 14, 15] */}
+        </>
+      ),
+    },
+    {
+      company: "Erbey Construction", // [cite: 16, 17]
+      link: "",
+      badges: [],
+      title: "Welding Quality Control Engineer", // [cite: 15]
+      logo: null,
+      start: "Aug 2025", // [cite: 19]
+      end: "Jan 2026", // [cite: 19]
+      description: (
+        <>
+          Managed quality inspection for a 1,000-ton steel construction project, ensuring adherence to structural and safety standards. {/* [cite: 20] */}
+          <br />
+          Implemented corrective actions in coordination with site engineers to maintain ISO 5817 etc. compliance under production constraints. {/* [cite: 21] */}
+        </>
+      ),
+    },
+    {
+      company: "Beko", // 
+      link: "https://www.beko.com.tr",
+      badges: [],
+      title: "R&D Engineering Intern", // [cite: 22]
+      logo: null,
+      start: "Jul 2024", // [cite: 23]
+      end: "Aug 2024", // [cite: 23]
+      description: (
+        <>
+          Developed a multidomain (air & refrigerant) simulation model for a heat pump tumble dryer using Python, improving performance prediction accuracy by ~87%. {/*  */}
         </>
       ),
     },
   ],
   education: [
     {
-      school: "Yildiz Technical University",
-      degree: "B.Eng., Mechanical Engineering",
-      start: "October 2021",
-      end: "July 2025",
+      school: "Yıldız Technical University", // [cite: 31]
+      degree: "B.Eng., Mechanical Engineering", // [cite: 30]
+      start: "Oct 2021", // [cite: 32]
+      end: "Jul 2025", // [cite: 32]
       description: (
         <>
+          Thesis subject: &quot;Physics-Informed Neural Networks for Rocket Nose Cone Flow Prediction: Experimental & computational and machine learning approaches&quot;. {/*  */}
+          <br />
           GPA: 2.9/4<br />
-          Coursework: thermodynamics, heat transfer, fluid dynamics, vibrations, strength
-          of materials, dynamics; plus C programming, calculus, linear algebra,
-          differential equations, statistics, numerical analysis, and finite element methods.<br />
+          Coursework: thermodynamics, heat transfer, fluid dynamics, vibrations, strength of materials, dynamics; plus C programming, calculus, linear algebra, differential equations, statistics, numerical analysis, and finite element methods.<br />
           Developed critical thinking and analytical skills to tackle engineering problems.
         </>
       ),
     },
     {
-      school: "AOSB Rahmiye Sare Palali Anatolian Technical High School",
-      degree: "Mechatronics Technician",
-      start: "September 2017",
-      end: "July 2021",
+      school: "RSP Technical High School", // [cite: 35]
+      degree: "Mechatronics", // [cite: 34]
+      start: "Sep 2017", // [cite: 40]
+      end: "Jul 2021", // [cite: 40]
       description: (
         <>
           GPA: 96.8/100<br />
-          Graduated first place with honour.<br />
-          Relevant coursework: technical drawing, basic mechanics, hydraulics, automatic
-          control, circuits, microcontrollers.<br />
+          Graduated first place with honour. {/* [cite: 36] */}
+          <br />
+          Relevant coursework: technical drawing, basic mechanics, hydraulics, automatic control, circuits, microcontrollers.<br />
           Participated in many small projects.
         </>
       ),
     },
   ],
   skills: [
-    "Communication",
-    "Teamwork",
-    "Research",
-    "Problem Solving",
-    "SolidWorks",
-    "ANSYS Fluent",
-    "ANSYS Mechanical",
-    "Python",
-    "C++",
-    "Data analysis", 
-    "MATLAB",
-    "Project Management",
-    "OpenFOAM",
-    "Machine Learning",
-    "Computational Fluid Dynamics (CFD)",
+    {
+      category: "Simulation & Analysis (CAE/FEA)",
+      items: [
+        "Ansys",
+        "OpenFOAM",
+        "MATLAB/Simulink",
+        "Computational Fluid Dynamics (CFD)",
+        "Finite Element Analysis (FEA)",
+        "Thermal Management Simulation",
+      ],
+    },
+    {
+      category: "Design & Manufacturing (CAD/CAM)",
+      items: [
+        "SolidWorks",
+        "Autodesk Inventor",
+        "HYPERMILL",
+        "3D Modeling",
+        "CNC Milling",
+        "GD&T / CMM Part Inspection",
+      ],
+    },
+    {
+      category: "Programming & Data Science",
+      items: [
+        "Python (Advanced)",
+        "C++",
+        "Machine Learning (PINNs)",
+        "Scientific Computing",
+        "Data Analysis",
+      ],
+    },
+    {
+      category: "Soft Skills & Management",
+      items: [
+        "Project Management",
+        "Problem Solving",
+        "Research",
+        "Teamwork",
+        "Communication",
+      ],
+    },
   ],
   languages: [
-    "English (IELTS: C1)",
-    "German (A1)",
-    "Persian (native)",
-    "Turkish (native)",
+    "English (IELTS: 7)", // 
+    "German (A2)", // 
+    "Persian (native)", // 
+    "Turkish (native)", // 
   ],
 
   References: [
     {
       title: "Res. Asst. PhD Mustafa Kemal Sevindir",
       techStack: [],
-      description:
-        "ASHRAE Turkish Chapter Treasurer",
+      description: "ASHRAE Turkish Chapter Treasurer",
       link: {
         label: "Email",
         href: "sevindir@yildiz.edu.tr",
@@ -131,8 +181,7 @@ export const RESUME_DATA = {
     {
       title: "Res. Asst. PhD Özlem Emanet",
       techStack: [],
-      description:
-        "Dept. of Mechanical Engineering, Yildiz Technical University",
+      description: "Dept. of Mechanical Engineering, Yildiz Technical University",
       link: {
         label: "Email",
         href: "panzehir@yildiz.edu.tr",
@@ -141,8 +190,7 @@ export const RESUME_DATA = {
     {
       title: "Assoc. Prof. Alp Tekin Ergenç",
       techStack: [],
-      description:
-        "Dept. of Mechanical Engineering, Yildiz Technical University",
+      description: "Dept. of Mechanical Engineering, Yildiz Technical University",
       link: {
         label: "Email",
         href: "aergenc@yildiz.edu.tr",
@@ -151,8 +199,7 @@ export const RESUME_DATA = {
     {
       title: "Prof. Özden Ağra",
       techStack: [],
-      description:
-        "Dept. of Mechanical Engineering, Yildiz Technical University",
+      description: "Dept. of Mechanical Engineering, Yildiz Technical University",
       link: {
         label: "Email",
         href: "oagra@yildiz.edu.tr",
@@ -161,20 +208,27 @@ export const RESUME_DATA = {
   ],
   Publications: [
     {
-      title: "3rd International Conference of Energy Systems",
+      title: "Journal of Engineering Sciences and Design", // 
       techStack: [],
-      description:
-        "Physics-Informed Neural Networks for Rocket Nose Cone Flow Prediction: A Comparative CFD Study",
+      description: "Trajectory Modelling for High-Power Rockets Using MATLAB/Simulink", // 
+      link: {
+        label: "DOI",
+        href: "https://doi.org/10.21923/jesd.1653290", // 
+      },
+    },
+    {
+      title: "3rd International Conference of Energy Systems", // [cite: 27]
+      techStack: [],
+      description: "Physics-Informed Neural Networks for Rocket Nose Cone Flow Prediction: A Comparative CFD Study", // [cite: 27]
       link: {
         label: "site",
         href: "https://ices2025conference.com/",
       },
     },
     {
-      title: "7th International Conference on Advances in Mechanical Engineering",
+      title: "7th International Conference on Advances in Mechanical Engineering", // [cite: 26]
       techStack: [],
-      description:
-        "Mathematical Modelling and Experimental Investigation of Lf280k Lion Batteries Cooling System with MATLAB.",
+      description: "Mathematical Modelling and Experimental Investigation of Lf280k Li-ion Batteries Cooling System with MATLAB.", // [cite: 26]
       link: {
         label: "site",
         href: "https://icame2024conference.com/",
@@ -183,85 +237,84 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
-      title: "Yildiz Rocket Team",
+      title: "Yıldız Rocket Team", // [cite: 46]
       techStack: [],
-      description:(<>
-        Led a team of 4 engineering students. Developed a low-shock satellite separation system for ARTAM-1 Rocket. Researched parachute dynamics.,
-      </>
+      description: (
+        <>
+          Volunteer Recovery sub-team Lead. {/* [cite: 46] */}
+          Led a team of 4 engineering students from different majors. {/* [cite: 49] */}
+          Developed a low shock satellite separation system for ARTAM-1 Rocket. {/* [cite: 48] */}
+        </>
       ),
-        link: {
+      link: {
         label: "YRT",
         href: "https://www.linkedin.com/company/yildizroket/",
       },
     },
-        {
-      title: "Volunteer Research Assistant",
+    {
+      title: "Volunteer Research Assistant", // [cite: 38]
       techStack: [],
       description: (
         <>
-          Participated in research on lithium ferrous phosphate batteries behaviour and
-          thermal cooling systems, culminating in a seminar presentation.<br />
-          Conducted simulation-based thermodynamics and heat-transfer studies for heat pump
-          tumble dryers using MATLAB.
+          Modelled and simulated thermal management systems for LFP batteries and heat pump dryers using MATLAB. {/* [cite: 42] */}
         </>
       ),
       link: {
-        label: "YTU Arçelik Laboratory",
+        label: "YTU Arçelik laboratory", // [cite: 39]
         href: "",
       },
     },
-        {
-      title: "2209-A Research Student",
+    {
+      title: "Volunteer 2209-A Research Student", // [cite: 45]
       techStack: [],
-      end: "October 2023",
+      end: "Oct 2023", // [cite: 44]
       description: (
         <>
-          Researched unmanned aerial vehicles using classification machine learning algorithms
-          for jungle fire protection.
+          Conducted research on unmanned aerial vehicles using classification machine learning algorithms for fire protection of forests. {/* [cite: 45] */}
         </>
       ),
-       link: {
-        label: "TÜBİTAK",
+      link: {
+        label: "TÜBİTAK", // [cite: 43]
         href: "https://tubitak.gov.tr/tr/burslar/lisans-onlisans/destek-programlari/2209-universite-ogrencileri-arastirma-projeleri-destekleme-programi",
       },
     },
-  {
-      title: "Student Representative",
+    {
+      title: "Student Representative", // [cite: 64]
       techStack: [],
-      end: "October 2023",
+      end: "Oct 2023",
       description: (
         <>
-          Transferred students’ needs to faculty.
+          Advocated for student needs in faculty meetings. {/* [cite: 64] */}
         </>
       ),
-       link: {
-        label: "Yildiz Technical University",
+      link: {
+        label: "Yıldız Technical University", // [cite: 31]
         href: "",
       },
     },
-      {
-      title: "ASHRAE Turkish Chapter Student Branch Vice President",
+    {
+      title: "ASHRAE Turkish Chapter Student Branch Vice President", // [cite: 65]
       techStack: [],
       description: (
         <>
           Attended and organized seminars.
         </>
       ),
-       link: {
+      link: {
         label: "ASHRAE Turkish Chapter",
         href: "",
       },
     },
-{
+    {
       title: "Organization Team Member",
       techStack: [],
       description: (
         <>
-        Managed social media.,
-        Designed posters.,
+          Managed social media.
+          Designed posters.
         </>
       ),
-       link: {
+      link: {
         label: ", YTU MAKTEK",
         href: "",
       },
