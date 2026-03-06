@@ -1,4 +1,3 @@
-import { Badge } from "../../components/ui/badge";
 import {
   Card,
   CardHeader,
@@ -12,40 +11,46 @@ import { RESUME_DATA } from "../../data/resume-data";
 type ProjectTags = readonly string[];
 
 interface ProjectLinkProps {
-  title: string;
-  link?: string;
+  href?: string;
 }
 
-/**
- * Renders project title with optional link and status indicator
- */
-function ProjectLink({ title, link }: ProjectLinkProps) {
-  if (!link) {
-    return <span>{title}</span>;
+function cleanTrailingComma(value: string) {
+  return value.trim().replace(/,+$/, "");
+}
+
+function cleanDescriptionText(description: React.ReactNode) {
+  if (typeof description === "string") {
+    return cleanTrailingComma(description);
   }
 
+  return description;
+}
+
+function getLinkDomain(href: string) {
+  try {
+    return new URL(href).hostname.replace(/^www\./, "");
+  } catch {
+    return "Link";
+  }
+}
+
+function ProjectLink({ href }: ProjectLinkProps) {
+  if (!href) {
+    return null;
+  }
+
+  const domain = getLinkDomain(href);
+
   return (
-    <>
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 hover:underline"
-        aria-label={`${title} project (opens in new tab)`}
-      >
-        {title}
-        <span
-          className="size-1 rounded-full bg-green-500"
-          aria-label="Active project indicator"
-        />
-      </a>
-      <div
-        className="hidden font-mono text-xs underline print:visible"
-        aria-hidden="true"
-      >
-        {link.replace("https://", "").replace("www.", "").replace("/", "")}
-      </div>
-    </>
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1 text-xs font-medium text-blue-600 hover:underline"
+      aria-label={`Open project link (${domain}) in new tab`}
+    >
+      Link
+    </a>
   );
 }
 
@@ -53,25 +58,19 @@ interface ProjectTagsProps {
   tags: ProjectTags;
 }
 
-/**
- * Renders a list of technology tags used in the project
- */
 function ProjectTags({ tags }: ProjectTagsProps) {
   if (tags.length === 0) return null;
 
   return (
     <ul
       className="mt-2 flex list-none flex-wrap gap-1 p-0"
-      aria-label="Technologies used"
+      aria-label="Project tech stack"
     >
       {tags.map((tag) => (
         <li key={tag}>
-          <Badge
-            className="px-1 py-0 text-[10px] print:px-1 print:py-0.5 print:text-[8px] print:leading-tight"
-            variant="secondary"
-          >
+          <span className="rounded bg-gray-100 px-2 py-1 text-xs text-gray-800">
             {tag}
-          </Badge>
+          </span>
         </li>
       ))}
     </ul>
@@ -85,10 +84,9 @@ interface ProjectCardProps {
   link?: string;
 }
 
-/**
- * Card component displaying project information
- */
 function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
+  const cleanedDescription = cleanDescriptionText(description);
+
   return (
     <Card
       className="flex h-full flex-col overflow-hidden border p-3"
@@ -96,18 +94,25 @@ function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
     >
       <CardHeader>
         <div className="space-y-1">
-          <CardTitle className="text-base">
-            <ProjectLink title={title} link={link} />
-          </CardTitle>
+          <CardTitle className="text-base">{title}</CardTitle>
           <CardDescription
             className="text-pretty font-mono text-xs print:text-[10px]"
             aria-label="Project description"
           >
-            {description}
+            {cleanedDescription}
           </CardDescription>
+          <ProjectLink href={link} />
+          {link && (
+            <div
+              className="hidden font-mono text-xs underline print:visible"
+              aria-hidden="true"
+            >
+              {getLinkDomain(link)}
+            </div>
+          )}
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex">
+      <CardContent className="mt-auto">
         <ProjectTags tags={tags} />
       </CardContent>
     </Card>
@@ -118,9 +123,6 @@ interface ProjectsProps {
   projects: (typeof RESUME_DATA)["projects"];
 }
 
-/**
- * Section component displaying all side projects
- */
 export function Projects({ projects }: ProjectsProps) {
   return (
     <Section className="print-force-new-page scroll-mb-16 print:space-y-4 print:pt-12">
@@ -133,10 +135,7 @@ export function Projects({ projects }: ProjectsProps) {
         aria-labelledby="side-projects"
       >
         {projects.map((project) => (
-          <article
-            key={project.title}
-            className="h-full" // Added h-full here
-          >
+          <article key={project.title} className="h-full">
             <ProjectCard
               title={project.title}
               description={project.description}
