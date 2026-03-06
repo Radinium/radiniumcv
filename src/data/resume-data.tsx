@@ -297,7 +297,6 @@ export const RESUME_DATA = {
       techStack: [],
       description: (
         <>
-          Attended and organized seminars.
         </>
       ),
       link: {

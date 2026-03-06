@@ -10,11 +10,29 @@ interface SkillsProps {
   className?: string;
 }
 
+function categorizeSkills(skills: Skills) {
+  const remaining = new Set<string>(skills);
+
+  const groups: { title: string; items: string[] }[] = Object.entries(SKILL_CATEGORIES).map(([title, categorySkills]) => {
+    const items = categorySkills.filter((skill) => remaining.has(skill));
+    items.forEach((skill) => remaining.delete(skill));
+    return { title, items };
+  });
+
+  if (remaining.size > 0) {
+    groups.push({ title: "Other", items: Array.from(remaining) });
+  }
+
+  return groups.filter((group) => group.items.length > 0);
+}
+
 /**
  * Skills section component
  * Displays skill categories with chip-style items
  */
 export function Skills({ skills, className }: SkillsProps) {
+  const groupedSkills = categorizeSkills(skills);
+
   return (
     <Section className={className}>
       <h2 className="text-xl font-bold" id="skills-section">
