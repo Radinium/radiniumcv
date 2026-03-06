@@ -200,7 +200,7 @@ export const RESUME_DATA = {
       description: "Physics-Informed Neural Networks for Rocket Nose Cone Flow Prediction: A Comparative CFD Study", // [cite: 27]
       link: {
         label: "site",
-        href: "https://ices2025conference.com/",
+        href: "",
       },
     },
     {
