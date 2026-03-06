@@ -34,7 +34,7 @@ function EducationItem({ education }: EducationItemProps) {
   const { school, start, end, degree, description } = education;
 
   return (
-    <Card>
+    <Card className="border border-gray-200 rounded-lg p-4 bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300">
       <CardHeader>
         <div className="flex items-center justify-between gap-x-2 text-base">
           <h3

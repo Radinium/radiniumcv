@@ -30,7 +30,7 @@ function ReferenceLink({ title, link }: ReferenceLinkProps) {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 hover:underline"
+        className="inline-flex items-center gap-1 text-slate-800 hover:text-blue-800 hover:underline transition-colors"
         aria-label={`${title} Reference (opens in new tab)`}
       >
         {title}
@@ -91,7 +91,7 @@ interface ReferenceCardProps {
 function ReferenceCard({ title, description, tags, link }: ReferenceCardProps) {
   return (
     <Card
-      className="flex h-full flex-col overflow-hidden border p-3"
+      className="flex h-full flex-col overflow-hidden border p-3 hover:-translate-y-1 hover:shadow-md transition-all duration-300"
       role="article"
     >
       <CardHeader>
