@@ -1,4 +1,4 @@
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { DownloadIcon, GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { RESUME_DATA } from "@/data/resume-data";
@@ -41,6 +41,22 @@ function SocialButton({ href, icon: Icon, label }: SocialButtonProps) {
         rel="noopener noreferrer"
       >
         <Icon className="size-4" aria-hidden="true" />
+      </a>
+    </Button>
+  );
+}
+
+function DownloadCVButton() {
+  return (
+    <Button className="mt-2 gap-2 print:hidden" asChild>
+      <a
+        href="/Mohammad_Afshar_CV.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Download CV PDF (opens in new tab)"
+      >
+        <DownloadIcon className="size-4" aria-hidden="true" />
+        Download CV
       </a>
     </Button>
   );
@@ -162,6 +178,8 @@ export function Header() {
           contact={RESUME_DATA.contact}
           personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
         />
+
+        <DownloadCVButton />
 
         <PrintContact
           contact={RESUME_DATA.contact}
