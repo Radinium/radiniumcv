@@ -40,3 +40,16 @@ If not set, the app falls back to `VERCEL_URL` (on Vercel) and then `http://loca
 3. Deploy.
 
 This avoids metadata warnings related to `metadataBase` and ensures Open Graph/Twitter image URLs are resolved correctly.
+
+## Performance metrics (Vercel Speed Insights)
+
+This project includes the Vercel Speed Insights browser script in `src/app/layout.tsx`, so metrics collection starts automatically after deployment on Vercel.
+
+After deploying:
+
+1. Open your deployment URL and browse the site.
+2. Wait about 30 seconds for first data points.
+3. If data does not appear, disable content blockers and navigate between pages.
+
+If your registry/network policy allows it, you can later switch to the official package integration (`@vercel/speed-insights`) with the `<SpeedInsights />` component.
+

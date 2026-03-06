@@ -1,5 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 import "./globals.css";
 import React from "react";
@@ -21,6 +22,10 @@ export default function RootLayout({
     <html lang="en">
       <body>{children}</body>
       <Analytics />
+      <Script
+        src="/_vercel/speed-insights/script.js"
+        strategy="afterInteractive"
+      />
     </html>
   );
 }
