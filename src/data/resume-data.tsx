@@ -118,26 +118,49 @@ export const RESUME_DATA = {
     },
   ],
   skills: [
-    "Communication",
-    "Teamwork",
-    "Research",
-    "Problem Solving",
-    "SolidWorks", // 
-    "Autodesk Inventor", // 
-    "HYPERMILL", // 
-    "ANSYS", // [cite: 52]
-    "OpenFOAM", // [cite: 52]
-    "MATLAB/Simulink", // [cite: 52]
-    "Python", // 
-    "C++", // 
-    "C", // 
-    "Machine Learning (PINNs)", // [cite: 59]
-    "Computational Fluid Dynamics (CFD)", // [cite: 53]
-    "Finite Element Analysis (FEA)", // [cite: 53]
-    "Thermal Management Simulation", // [cite: 53]
-    "3D Modeling & CNC Milling", // 
-    "GD&T / CMM Part Inspection", // 
-    "Project Management", // 
+    {
+      category: "Simulation & Analysis (CAE/FEA)",
+      items: [
+        "Ansys",
+        "OpenFOAM",
+        "MATLAB/Simulink",
+        "Computational Fluid Dynamics (CFD)",
+        "Finite Element Analysis (FEA)",
+        "Thermal Management Simulation",
+      ],
+    },
+    {
+      category: "Design & Manufacturing (CAD/CAM)",
+      items: [
+        "SolidWorks",
+        "Autodesk Inventor",
+        "HYPERMILL",
+        "3D Modeling",
+        "CNC Milling",
+        "GD&T / CMM Part Inspection",
+      ],
+    },
+    {
+      category: "Programming & Data Science",
+      items: [
+        "Python (Advanced)",
+        "C++",
+        "C",
+        "Machine Learning (PINNs)",
+        "Scientific Computing",
+        "Data Analysis",
+      ],
+    },
+    {
+      category: "Soft Skills & Management",
+      items: [
+        "Project Management",
+        "Problem Solving",
+        "Research",
+        "Teamwork",
+        "Communication",
+      ],
+    },
   ],
   languages: [
     "English (IELTS: 7)", // 
