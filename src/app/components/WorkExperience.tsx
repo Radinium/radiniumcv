@@ -68,7 +68,7 @@ interface CompanyLinkProps {
 function CompanyLink({ company, link }: CompanyLinkProps) {
   return (
     <a
-      className="hover:underline"
+      className="text-slate-800 hover:text-blue-900 hover:underline"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
@@ -91,7 +91,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
   const { company, link, badges, title, start, end, description } = work;
 
   return (
-    <Card className="py-1 print:py-0">
+    <Card className="rounded-lg border border-gray-200 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-md print:p-3">
       <CardHeader className="print:space-y-1">
         <div className="flex items-center justify-between gap-x-2 text-base">
           <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">

@@ -39,7 +39,7 @@ function PublicationLink({ href }: PublicationLinkProps) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1 text-xs font-medium text-blue-600 hover:underline"
+      className="inline-flex items-center gap-1 text-xs font-medium text-slate-800 hover:text-blue-800 hover:underline transition-colors"
       aria-label={`Open publication link (${domain}) in new tab`}
     >
       {domain}
@@ -80,7 +80,7 @@ interface PublicationCardProps {
 function PublicationCard({ title, description, tags, link }: PublicationCardProps) {
   return (
     <Card
-      className="flex h-full flex-col overflow-hidden border p-3"
+      className="flex h-full flex-col overflow-hidden border p-3 hover:-translate-y-1 hover:shadow-md transition-all duration-300"
       role="article"
     >
       <CardHeader>
