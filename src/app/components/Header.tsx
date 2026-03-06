@@ -12,7 +12,7 @@ function LocationLink({ location, locationLink }: LocationLinkProps) {
   return (
     <p className="max-w-md items-center text-pretty font-mono text-xs text-foreground">
       <a
-        className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
+        className="inline-flex gap-x-1.5 align-baseline leading-none text-slate-800 hover:text-blue-900 hover:underline"
         href={locationLink}
         target="_blank"
         rel="noopener noreferrer"
@@ -33,7 +33,7 @@ interface SocialButtonProps {
 
 function SocialButton({ href, icon: Icon, label }: SocialButtonProps) {
   return (
-    <Button className="size-8" variant="outline" size="icon" asChild>
+    <Button className="size-8 text-slate-800 hover:text-blue-900" variant="outline" size="icon" asChild>
       <a
         href={href}
         aria-label={label}
@@ -121,7 +121,7 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
       {personalWebsiteUrl && (
         <>
           <a
-            className="underline hover:text-foreground/70"
+            className="underline text-slate-800 hover:text-blue-900"
             href={personalWebsiteUrl}
           >
             {new URL(personalWebsiteUrl).hostname}
@@ -132,7 +132,7 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
       {contact.email && (
         <>
           <a
-            className="underline hover:text-foreground/70"
+            className="underline text-slate-800 hover:text-blue-900"
             href={`mailto:${contact.email}`}
           >
             {contact.email}
@@ -142,7 +142,7 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
       )}
       {contact.tel && (
         <a
-          className="underline hover:text-foreground/70"
+          className="underline text-slate-800 hover:text-blue-900"
           href={`tel:${contact.tel}`}
         >
           {contact.tel}
