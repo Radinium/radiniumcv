@@ -41,6 +41,22 @@ export const RESUME_DATA = {
   },
   work: [
     {
+      company: "Teknosis", 
+      link: "",
+      badges: [],
+      title: "Design Engineer (Contract)",
+      logo: null,
+      start: "Mar 2026",
+      end: "Present",
+      description: (
+        <>
+          Designed and optimized CNC machine components, utilizing automated geometry generation and iterative FEA loops to achieve optimal mass-to-stress ratios.
+          <br />
+          Performed iterative design evaluations to balance production feasibility with cost and structural performance.
+        </>
+      ),
+    },
+    {
       company: "Rivon/Freelance", // [cite: 11]
       link: "",
       badges: [],
@@ -55,18 +71,16 @@ export const RESUME_DATA = {
       ),
     },
     {
-      company: "Erbey Construction", // [cite: 16, 17]
+      company: "Erbey Construction",
       link: "",
       badges: [],
-      title: "Welding Quality Control Engineer", // [cite: 15]
+      title: "Project Engineer (Project-Based)",
       logo: null,
-      start: "Aug 2025", // [cite: 19]
-      end: "Jan 2026", // [cite: 19]
+      start: "Aug 2025",
+      end: "Jan 2026",
       description: (
         <>
-          Managed quality inspection for a 1,000-ton steel construction project, ensuring adherence to structural and safety standards. {/* [cite: 20] */}
-          <br />
-          Implemented corrective actions in coordination with site engineers to maintain ISO 5817 etc. compliance under production constraints. {/* [cite: 21] */}
+          Managed technical documentation and cross-referenced engineering drawings for a 1,000-ton steel project.
         </>
       ),
     },
