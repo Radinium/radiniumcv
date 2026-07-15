@@ -29,19 +29,31 @@ interface EducationItemProps {
 
 /**
  * Individual education card component
- *///
+ */
 function EducationItem({ education }: EducationItemProps) {
-  const { school, start, end, degree, description } = education;
+  const { school, link, start, end, degree, description } = education;
 
   return (
-    <Card className="border border-gray-200 rounded-lg p-4 bg-white hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+    <Card className="rounded-lg border border-gray-200 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
       <CardHeader>
         <div className="flex items-center justify-between gap-x-2 text-base">
           <h3
             className="font-semibold leading-none"
             id={`education-${school.toLowerCase().replace(/\s+/g, "-")}`}
           >
-            {school}
+            {link ? (
+              <a
+                className="text-slate-800 hover:text-blue-900 hover:underline"
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${school} website`}
+              >
+                {school}
+              </a>
+            ) : (
+              school
+            )}
           </h3>
           <EducationPeriod start={start} end={end} />
         </div>

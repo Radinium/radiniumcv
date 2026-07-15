@@ -33,7 +33,12 @@ interface SocialButtonProps {
 
 function SocialButton({ href, icon: Icon, label }: SocialButtonProps) {
   return (
-    <Button className="size-8 text-slate-800 hover:text-blue-900" variant="outline" size="icon" asChild>
+    <Button
+      className="size-8 text-slate-800 hover:text-blue-900"
+      variant="outline"
+      size="icon"
+      asChild
+    >
       <a
         href={href}
         aria-label={label}
@@ -121,7 +126,7 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
       {personalWebsiteUrl && (
         <>
           <a
-            className="underline text-slate-800 hover:text-blue-900"
+            className="text-slate-800 underline hover:text-blue-900"
             href={personalWebsiteUrl}
           >
             {new URL(personalWebsiteUrl).hostname}
@@ -132,7 +137,7 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
       {contact.email && (
         <>
           <a
-            className="underline text-slate-800 hover:text-blue-900"
+            className="text-slate-800 underline hover:text-blue-900"
             href={`mailto:${contact.email}`}
           >
             {contact.email}
@@ -142,7 +147,7 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
       )}
       {contact.tel && (
         <a
-          className="underline text-slate-800 hover:text-blue-900"
+          className="text-slate-800 underline hover:text-blue-900"
           href={`tel:${contact.tel}`}
         >
           {contact.tel}

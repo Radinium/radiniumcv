@@ -12,6 +12,7 @@ type ProjectTags = readonly string[];
 
 interface ProjectLinkProps {
   href?: string;
+  label?: string;
 }
 
 function cleanTrailingComma(value: string) {
@@ -34,7 +35,7 @@ function getLinkDomain(href: string) {
   }
 }
 
-function ProjectLink({ href }: ProjectLinkProps) {
+function ProjectLink({ href, label }: ProjectLinkProps) {
   if (!href) {
     return null;
   }
@@ -49,7 +50,7 @@ function ProjectLink({ href }: ProjectLinkProps) {
       className="inline-flex items-center gap-1 text-xs font-medium text-slate-800 hover:text-blue-900 hover:underline"
       aria-label={`Open project link (${domain}) in new tab`}
     >
-      Link
+      {label || domain}
     </a>
   );
 }
@@ -82,9 +83,16 @@ interface ProjectCardProps {
   description: React.ReactNode;
   tags: ProjectTags;
   link?: string;
+  linkLabel?: string;
 }
 
-function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
+function ProjectCard({
+  title,
+  description,
+  tags,
+  link,
+  linkLabel,
+}: ProjectCardProps) {
   const cleanedDescription = cleanDescriptionText(description);
 
   return (
@@ -99,9 +107,11 @@ function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
             className="text-pretty font-mono text-xs print:text-[10px]"
             aria-label="Project description"
           >
-            {cleanedDescription}
+            <ul className="list-disc space-y-1 pl-4">
+              <li>{cleanedDescription}</li>
+            </ul>
           </CardDescription>
-          <ProjectLink href={link} />
+          <ProjectLink href={link} label={linkLabel} />
           {link && (
             <div
               className="hidden font-mono text-xs underline print:visible"
@@ -141,6 +151,7 @@ export function Projects({ projects }: ProjectsProps) {
               description={project.description}
               tags={project.techStack}
               link={"link" in project ? project.link.href : undefined}
+              linkLabel={"link" in project ? project.link.label : undefined}
             />
           </article>
         ))}

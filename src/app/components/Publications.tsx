@@ -25,9 +25,10 @@ function getLinkDomain(href: string) {
 
 interface PublicationLinkProps {
   href?: string;
+  label?: string;
 }
 
-function PublicationLink({ href }: PublicationLinkProps) {
+function PublicationLink({ href, label }: PublicationLinkProps) {
   if (!href) {
     return null;
   }
@@ -39,10 +40,10 @@ function PublicationLink({ href }: PublicationLinkProps) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1 text-xs font-medium text-slate-800 hover:text-blue-800 hover:underline transition-colors"
+      className="inline-flex items-center gap-1 text-xs font-medium text-slate-800 transition-colors hover:text-blue-800 hover:underline"
       aria-label={`Open publication link (${domain}) in new tab`}
     >
-      {domain}
+      {label || domain}
     </a>
   );
 }
@@ -55,7 +56,10 @@ function PublicationTags({ tags }: PublicationTagsProps) {
   if (tags.length === 0) return null;
 
   return (
-    <ul className="mt-2 flex list-none flex-wrap gap-1 p-0" aria-label="Tech stack">
+    <ul
+      className="mt-2 flex list-none flex-wrap gap-1 p-0"
+      aria-label="Tech stack"
+    >
       {tags.map((tag) => (
         <li key={tag}>
           <Badge
@@ -75,12 +79,19 @@ interface PublicationCardProps {
   description: string;
   tags: PublicationTags;
   link?: string;
+  linkLabel?: string;
 }
 
-function PublicationCard({ title, description, tags, link }: PublicationCardProps) {
+function PublicationCard({
+  title,
+  description,
+  tags,
+  link,
+  linkLabel,
+}: PublicationCardProps) {
   return (
     <Card
-      className="flex h-full flex-col overflow-hidden border p-3 hover:-translate-y-1 hover:shadow-md transition-all duration-300"
+      className="flex h-full flex-col overflow-hidden border p-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
       role="article"
     >
       <CardHeader>
@@ -90,9 +101,11 @@ function PublicationCard({ title, description, tags, link }: PublicationCardProp
             className="text-pretty font-mono text-xs print:text-[10px]"
             aria-label="Publication description"
           >
-            {cleanTrailingComma(description)}
+            <ul className="list-disc space-y-1 pl-4">
+              <li>{cleanTrailingComma(description)}</li>
+            </ul>
           </CardDescription>
-          <PublicationLink href={link} />
+          <PublicationLink href={link} label={linkLabel} />
           {link && (
             <div
               className="hidden font-mono text-xs underline print:visible"
@@ -132,6 +145,9 @@ export function Publications({ Publications }: PublicationsProps) {
               description={publication.description}
               tags={publication.techStack}
               link={"link" in publication ? publication.link.href : undefined}
+              linkLabel={
+                "link" in publication ? publication.link.label : undefined
+              }
             />
           </article>
         ))}
