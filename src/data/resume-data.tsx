@@ -286,14 +286,15 @@ export const RESUME_DATA = {
       title: "ICES2025 ISTANBUL", // [cite: 27]
       techStack: [],
       description:
-        "PINN for Rocket Nose Cone Flow Prediction: A Comparative CFD Study", // [cite: 27]
+        "Physics-Informed Neural Networks for Rocket Nose Cone Flow Prediction: A Comparative CFD Study", // [cite: 27]
       link: {
         label: "site",
         href: "https://www.icesconference.org/",
       },
     },
     {
-      title: "ICAME2024 ISTANBUL", // [cite: 26]
+      title:
+        "7th International Conference on Advances in Mechanical Engineering", // [cite: 26]
       techStack: [],
       description:
         "Mathematical Modelling and Experimental Investigation of Lf280k Li-ion Batteries Cooling System with MATLAB.", // [cite: 26]
@@ -312,8 +313,8 @@ export const RESUME_DATA = {
           Volunteer Recovery sub-team Lead. {/* [cite: 46] */}
           Led a team of 4 engineering students from different majors.{" "}
           {/* [cite: 49] */}
-          Developed a satellite separation system for ARTAM-1 Rocket as Recovery
-          Lead. {/* [cite: 48] */}
+          Developed a low shock satellite separation system for ARTAM-1 Rocket.{" "}
+          {/* [cite: 48] */}
         </>
       ),
       link: {
@@ -341,8 +342,9 @@ export const RESUME_DATA = {
       end: "Oct 2023", // [cite: 44]
       description: (
         <>
-          Engineered a forest fire detection system utilizing algorithms as
-          2209-A Research Student at TÜBİTAK. {/* [cite: 45] */}
+          Conducted research on unmanned aerial vehicles using classification
+          machine learning algorithms for fire protection of forests.{" "}
+          {/* [cite: 45] */}
         </>
       ),
       link: {
