@@ -101,7 +101,9 @@ function PublicationCard({
             className="text-pretty font-mono text-xs print:text-[10px]"
             aria-label="Publication description"
           >
-            {cleanTrailingComma(description)}
+            <ul className="list-disc space-y-1 pl-4">
+              <li>{cleanTrailingComma(description)}</li>
+            </ul>
           </CardDescription>
           <PublicationLink href={link} label={linkLabel} />
           {link && (

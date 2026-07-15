@@ -107,7 +107,9 @@ function ProjectCard({
             className="text-pretty font-mono text-xs print:text-[10px]"
             aria-label="Project description"
           >
-            {cleanedDescription}
+            <ul className="list-disc space-y-1 pl-4">
+              <li>{cleanedDescription}</li>
+            </ul>
           </CardDescription>
           <ProjectLink href={link} label={linkLabel} />
           {link && (

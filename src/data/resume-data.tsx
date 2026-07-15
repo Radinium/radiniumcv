@@ -23,7 +23,7 @@ export const RESUME_DATA = {
       conferences.
     </>
   ),
-  avatarUrl: "/biometric.jpg",
+  avatarUrl: "/biometric",
   personalWebsiteUrl: "https://www.afsharr.xyz",
   contact: {
     email: "afsharmohammadd@gmail.com", // [cite: 4]
@@ -56,18 +56,22 @@ export const RESUME_DATA = {
       start: "Mar 2026",
       end: "Present",
       description: (
-        <>
-          Engineered functional 3D solid manufacturing assemblies from 2D
-          drawings for CNC machine tool components, including spindle
-          assemblies, tool turrets, lathe chucks, and tailstocks.
-          <br />
-          Conducted Design for Manufacturing (DFM) reviews and generated CAM
-          toolpaths, aligning components to CNC machining capabilities and
-          reducing production costs.
-          <br />
-          Trained technicians on workflows and programming for legacy CNC
-          equipment, improving production efficiency.
-        </>
+        <ul className="list-disc space-y-1 pl-4">
+          <li>
+            Engineered functional 3D solid manufacturing assemblies from 2D
+            drawings for CNC machine tool components, including spindle
+            assemblies, tool turrets, lathe chucks, and tailstocks.
+          </li>
+          <li>
+            Conducted Design for Manufacturing (DFM) reviews and generated CAM
+            toolpaths, aligning components to CNC machining capabilities and
+            reducing production costs.
+          </li>
+          <li>
+            Trained technicians on workflows and programming for legacy CNC
+            equipment, improving production efficiency.
+          </li>
+        </ul>
       ),
     },
     {
@@ -94,19 +98,23 @@ export const RESUME_DATA = {
       start: "Aug 2025",
       end: "Jan 2026",
       description: (
-        <>
-          Produced 2D fabrication and erection drawings for a 1,000-ton heavy
-          structural steel project using Tekla Structures and AutoCAD,
-          translating structural frameworks into manufacturing instructions.
-          <br />
-          Generated Bills of Materials (BOMs) and technical documentation,
-          cross-referencing structural drawings to ensure material traceability
-          and prevent costly procurement errors.
-          <br />
-          Conducted on-floor quality control inspections of welded steel
-          assemblies, verifying structural tolerances and weld compliance
-          against engineering drawings prior to final site erection.
-        </>
+        <ul className="list-disc space-y-1 pl-4">
+          <li>
+            Produced 2D fabrication and erection drawings for a 1,000-ton heavy
+            structural steel project using Tekla Structures and AutoCAD,
+            translating structural frameworks into manufacturing instructions.
+          </li>
+          <li>
+            Generated Bills of Materials (BOMs) and technical documentation,
+            cross-referencing structural drawings to ensure material
+            traceability and prevent costly procurement errors.
+          </li>
+          <li>
+            Conducted on-floor quality control inspections of welded steel
+            assemblies, verifying structural tolerances and weld compliance
+            against engineering drawings prior to final site erection.
+          </li>
+        </ul>
       ),
     },
     {
@@ -133,7 +141,11 @@ export const RESUME_DATA = {
       degree: "M.Sc., Mechanical Engineering",
       start: "Jul 2026",
       end: "Present",
-      description: <>Heat & Fluid Program</>,
+      description: (
+        <ul className="list-disc space-y-1 pl-4">
+          <li>Heat & Fluid Program</li>
+        </ul>
+      ),
     },
     {
       school: "Yıldız Technical University", // [cite: 31]
@@ -142,20 +154,23 @@ export const RESUME_DATA = {
       start: "Oct 2021", // [cite: 32]
       end: "Jul 2025", // [cite: 32]
       description: (
-        <>
-          Thesis subject: &quot;PINN for Nose Cone Flow Prediction: Exp. & Comp.
-          & ML approaches&quot;. {/*  */}
-          <br />
-          GPA: 2.9/4
-          <br />
-          Coursework: thermodynamics, heat transfer, fluid dynamics, vibrations,
-          strength of materials, dynamics; plus C programming, calculus, linear
-          algebra, differential equations, statistics, numerical analysis, and
-          finite element methods.
-          <br />
-          Developed critical thinking and analytical skills to tackle
-          engineering problems.
-        </>
+        <ul className="list-disc space-y-1 pl-4">
+          <li>
+            Thesis subject: &quot;PINN for Nose Cone Flow Prediction: Exp. &
+            Comp. & ML approaches&quot;.
+          </li>
+          <li>GPA: 2.9/4</li>
+          <li>
+            Coursework: thermodynamics, heat transfer, fluid dynamics,
+            vibrations, strength of materials, dynamics; plus C programming,
+            calculus, linear algebra, differential equations, statistics,
+            numerical analysis, and finite element methods.
+          </li>
+          <li>
+            Developed critical thinking and analytical skills to tackle
+            engineering problems.
+          </li>
+        </ul>
       ),
     },
     {
@@ -165,16 +180,15 @@ export const RESUME_DATA = {
       start: "Sep 2017", // [cite: 40]
       end: "Jul 2021", // [cite: 40]
       description: (
-        <>
-          GPA: 96.8/100
-          <br />
-          Graduated first place with honour. {/* [cite: 36] */}
-          <br />
-          Relevant coursework: technical drawing, basic mechanics, hydraulics,
-          automatic control, circuits, microcontrollers.
-          <br />
-          Participated in many small projects.
-        </>
+        <ul className="list-disc space-y-1 pl-4">
+          <li>GPA: 96.8/100</li>
+          <li>Graduated first place with honour.</li>
+          <li>
+            Relevant coursework: technical drawing, basic mechanics, hydraulics,
+            automatic control, circuits, microcontrollers.
+          </li>
+          <li>Participated in many small projects.</li>
+        </ul>
       ),
     },
   ],
@@ -286,21 +300,20 @@ export const RESUME_DATA = {
       title: "ICES2025 ISTANBUL", // [cite: 27]
       techStack: [],
       description:
-        "Physics-Informed Neural Networks for Rocket Nose Cone Flow Prediction: A Comparative CFD Study", // [cite: 27]
+        "PINN for Rocket Nose Cone Flow Prediction: A Comparative CFD Study", // [cite: 27]
       link: {
         label: "site",
-        href: "https://www.icesconference.org/",
+        href: "/ICES2025.pdf",
       },
     },
     {
-      title:
-        "7th International Conference on Advances in Mechanical Engineering", // [cite: 26]
+      title: "ICAME2024 ISTANBUL", // [cite: 26]
       techStack: [],
       description:
         "Mathematical Modelling and Experimental Investigation of Lf280k Li-ion Batteries Cooling System with MATLAB.", // [cite: 26]
       link: {
         label: "site",
-        href: "https://icame2024conference.com/",
+        href: "/ICAME2024.pdf",
       },
     },
   ],
@@ -313,8 +326,8 @@ export const RESUME_DATA = {
           Volunteer Recovery sub-team Lead. {/* [cite: 46] */}
           Led a team of 4 engineering students from different majors.{" "}
           {/* [cite: 49] */}
-          Developed a low shock satellite separation system for ARTAM-1 Rocket.{" "}
-          {/* [cite: 48] */}
+          Developed a satellite separation system for ARTAM-1 Rocket as Recovery
+          Lead. {/* [cite: 48] */}
         </>
       ),
       link: {
@@ -342,9 +355,8 @@ export const RESUME_DATA = {
       end: "Oct 2023", // [cite: 44]
       description: (
         <>
-          Conducted research on unmanned aerial vehicles using classification
-          machine learning algorithms for fire protection of forests.{" "}
-          {/* [cite: 45] */}
+          Engineered a forest fire detection system utilizing algorithms as
+          2209-A Research Student at TÜBİTAK. {/* [cite: 45] */}
         </>
       ),
       link: {
