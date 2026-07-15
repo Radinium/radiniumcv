@@ -7,6 +7,7 @@ import {
   ParabolLogo,
 } from "@/images/logos";
 import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import { BoxIcon } from "lucide-react";
 
 export const RESUME_DATA = {
   name: "Mohammad Afshar", // [cite: 1]
@@ -16,12 +17,17 @@ export const RESUME_DATA = {
   about: "Mechanical Engineer - CAE/CFD / R&D", // [cite: 2]
   summary: (
     <>
-      Mechanical Engineer specializing in computational engineering, CAE, and simulation-driven R&D. {/* [cite: 7] */}
-      Strong background in CFD, FEA, thermal management, and Python-based modelling, with experience on application of Machine Learning to engineering problems. {/* [cite: 8] */}
-      Published author in peer-reviewed national journals and international conferences. Seeking a Design, CAE, or R&D Engineer role. {/* [cite: 9] */}
+      Mechanical Engineer specializing in computational engineering, CAE, and
+      simulation-driven R&D. {/* [cite: 7] */}
+      Strong background in CFD, FEA, thermal management, and Python-based
+      modelling, with experience on application of Machine Learning to
+      engineering problems. {/* [cite: 8] */}
+      Published author in peer-reviewed national journals and international
+      conferences. Seeking a Design, CAE, or R&D Engineer role.{" "}
+      {/* [cite: 9] */}
     </>
   ),
-  avatarUrl: "https://avatars.githubusercontent.com/u/51886828?v=4",
+  avatarUrl: "/biometric.jpg",
   personalWebsiteUrl: "https://www.linkedin.com/in/mhmdafshar/",
   contact: {
     email: "afsharmohammadd@gmail.com", // [cite: 4]
@@ -33,6 +39,11 @@ export const RESUME_DATA = {
         icon: GitHubIcon,
       },
       {
+        name: "GrabCAD",
+        url: "https://grabcad.com/mohammad.afshar-4/models",
+        icon: BoxIcon,
+      },
+      {
         name: "LinkedIn",
         url: "https://www.linkedin.com/in/mhmdafshar/", // [cite: 5]
         icon: LinkedInIcon,
@@ -41,8 +52,8 @@ export const RESUME_DATA = {
   },
   work: [
     {
-      company: "Teknosis", 
-      link: "",
+      company: "Teknosis",
+      link: "https://www.teknosistem.com.tr/",
       badges: [],
       title: "Design Engineer (Contract)",
       logo: null,
@@ -50,15 +61,18 @@ export const RESUME_DATA = {
       end: "Present",
       description: (
         <>
-          Designed and optimized CNC machine components, utilizing automated geometry generation and iterative FEA loops to achieve optimal mass-to-stress ratios.
+          Designed and optimized CNC machine components, utilizing automated
+          geometry generation and iterative FEA loops to achieve optimal
+          mass-to-stress ratios.
           <br />
-          Performed iterative design evaluations to balance production feasibility with cost and structural performance.
+          Performed iterative design evaluations to balance production
+          feasibility with cost and structural performance.
         </>
       ),
     },
     {
       company: "Rivon/Freelance", // [cite: 11]
-      link: "",
+      link: "https://tr.linkedin.com/company/rivontr",
       badges: [],
       title: "Simulation & Prototyping Engineer", // [cite: 11]
       logo: null,
@@ -66,13 +80,14 @@ export const RESUME_DATA = {
       end: "Present", // [cite: 13]
       description: (
         <>
-          Performed structural validation (FEA) and design optimization for functional 3D printed mechanical components. {/* [cite: 14, 15] */}
+          Performed structural validation (FEA) and design optimization for
+          functional 3D printed mechanical components. {/* [cite: 14, 15] */}
         </>
       ),
     },
     {
       company: "Erbey Construction",
-      link: "",
+      link: "https://www.erbeycati.com/index.en.html",
       badges: [],
       title: "Project Engineer (Project-Based)",
       logo: null,
@@ -80,12 +95,13 @@ export const RESUME_DATA = {
       end: "Jan 2026",
       description: (
         <>
-          Managed technical documentation and cross-referenced engineering drawings for a 1,000-ton steel project.
+          Managed technical documentation and cross-referenced engineering
+          drawings for a 1,000-ton steel project.
         </>
       ),
     },
     {
-      company: "Beko", // 
+      company: "Beko", //
       link: "https://www.beko.com.tr",
       badges: [],
       title: "R&D Engineering Intern", // [cite: 22]
@@ -94,7 +110,9 @@ export const RESUME_DATA = {
       end: "Aug 2024", // [cite: 23]
       description: (
         <>
-          Developed a multidomain (air & refrigerant) simulation model for a heat pump tumble dryer using Python, improving performance prediction accuracy by ~87%. {/*  */}
+          Developed a multidomain (air & refrigerant) simulation model for a
+          heat pump tumble dryer using Python, improving performance prediction
+          accuracy by ~87%. {/*  */}
         </>
       ),
     },
@@ -102,30 +120,43 @@ export const RESUME_DATA = {
   education: [
     {
       school: "Yıldız Technical University", // [cite: 31]
+      link: "https://www.yildiz.edu.tr/en",
       degree: "B.Eng., Mechanical Engineering", // [cite: 30]
       start: "Oct 2021", // [cite: 32]
       end: "Jul 2025", // [cite: 32]
       description: (
         <>
-          Thesis subject: &quot;Physics-Informed Neural Networks for Rocket Nose Cone Flow Prediction: Experimental & computational and machine learning approaches&quot;. {/*  */}
+          Thesis subject: &quot;Physics-Informed Neural Networks for Rocket Nose
+          Cone Flow Prediction: Experimental & computational and machine
+          learning approaches&quot;. {/*  */}
           <br />
-          GPA: 2.9/4<br />
-          Coursework: thermodynamics, heat transfer, fluid dynamics, vibrations, strength of materials, dynamics; plus C programming, calculus, linear algebra, differential equations, statistics, numerical analysis, and finite element methods.<br />
-          Developed critical thinking and analytical skills to tackle engineering problems.
+          GPA: 2.9/4
+          <br />
+          Coursework: thermodynamics, heat transfer, fluid dynamics, vibrations,
+          strength of materials, dynamics; plus C programming, calculus, linear
+          algebra, differential equations, statistics, numerical analysis, and
+          finite element methods.
+          <br />
+          Developed critical thinking and analytical skills to tackle
+          engineering problems.
         </>
       ),
     },
     {
       school: "RSP Technical High School", // [cite: 35]
+      link: "https://www.afyonteknikkoleji.com/",
       degree: "Mechatronics", // [cite: 34]
       start: "Sep 2017", // [cite: 40]
       end: "Jul 2021", // [cite: 40]
       description: (
         <>
-          GPA: 96.8/100<br />
+          GPA: 96.8/100
+          <br />
           Graduated first place with honour. {/* [cite: 36] */}
           <br />
-          Relevant coursework: technical drawing, basic mechanics, hydraulics, automatic control, circuits, microcontrollers.<br />
+          Relevant coursework: technical drawing, basic mechanics, hydraulics,
+          automatic control, circuits, microcontrollers.
+          <br />
           Participated in many small projects.
         </>
       ),
@@ -177,10 +208,10 @@ export const RESUME_DATA = {
     },
   ],
   languages: [
-    "English (IELTS: 7)", // 
-    "German (A2)", // 
-    "Persian (native)", // 
-    "Turkish (native)", // 
+    "English (IELTS: 7)", //
+    "German (A2)", //
+    "Persian (native)", //
+    "Turkish (native)", //
   ],
 
   References: [
@@ -190,60 +221,67 @@ export const RESUME_DATA = {
       description: "ASHRAE Turkish Chapter Treasurer",
       link: {
         label: "Email",
-        href: "sevindir@yildiz.edu.tr",
+        href: "mailto:sevindir@yildiz.edu.tr",
       },
     },
     {
       title: "Res. Asst. PhD Özlem Emanet",
       techStack: [],
-      description: "Dept. of Mechanical Engineering, Yildiz Technical University",
+      description:
+        "Dept. of Mechanical Engineering, Yildiz Technical University",
       link: {
         label: "Email",
-        href: "panzehir@yildiz.edu.tr",
+        href: "mailto:panzehir@yildiz.edu.tr",
       },
     },
     {
       title: "Assoc. Prof. Alp Tekin Ergenç",
       techStack: [],
-      description: "Dept. of Mechanical Engineering, Yildiz Technical University",
+      description:
+        "Dept. of Mechanical Engineering, Yildiz Technical University",
       link: {
         label: "Email",
-        href: "aergenc@yildiz.edu.tr",
+        href: "mailto:aergenc@yildiz.edu.tr",
       },
     },
     {
       title: "Prof. Özden Ağra",
       techStack: [],
-      description: "Dept. of Mechanical Engineering, Yildiz Technical University",
+      description:
+        "Dept. of Mechanical Engineering, Yildiz Technical University",
       link: {
         label: "Email",
-        href: "oagra@yildiz.edu.tr",
+        href: "mailto:oagra@yildiz.edu.tr",
       },
     },
   ],
   Publications: [
     {
-      title: "Journal of Engineering Sciences and Design", // 
+      title: "Journal of Engineering Sciences and Design", //
       techStack: [],
-      description: "Trajectory Modelling for High-Power Rockets Using MATLAB/Simulink", // 
+      description:
+        "Trajectory Modelling for High-Power Rockets Using MATLAB/Simulink", //
       link: {
         label: "DOI",
-        href: "https://doi.org/10.21923/jesd.1653290", // 
+        href: "https://doi.org/10.21923/jesd.1653290", //
       },
     },
     {
       title: "3rd International Conference of Energy Systems", // [cite: 27]
       techStack: [],
-      description: "Physics-Informed Neural Networks for Rocket Nose Cone Flow Prediction: A Comparative CFD Study", // [cite: 27]
+      description:
+        "Physics-Informed Neural Networks for Rocket Nose Cone Flow Prediction: A Comparative CFD Study", // [cite: 27]
       link: {
         label: "site",
-        href: "",
+        href: "https://www.icesconference.org/",
       },
     },
     {
-      title: "7th International Conference on Advances in Mechanical Engineering", // [cite: 26]
+      title:
+        "7th International Conference on Advances in Mechanical Engineering", // [cite: 26]
       techStack: [],
-      description: "Mathematical Modelling and Experimental Investigation of Lf280k Li-ion Batteries Cooling System with MATLAB.", // [cite: 26]
+      description:
+        "Mathematical Modelling and Experimental Investigation of Lf280k Li-ion Batteries Cooling System with MATLAB.", // [cite: 26]
       link: {
         label: "site",
         href: "https://icame2024conference.com/",
@@ -257,8 +295,10 @@ export const RESUME_DATA = {
       description: (
         <>
           Volunteer Recovery sub-team Lead. {/* [cite: 46] */}
-          Led a team of 4 engineering students from different majors. {/* [cite: 49] */}
-          Developed a low shock satellite separation system for ARTAM-1 Rocket. {/* [cite: 48] */}
+          Led a team of 4 engineering students from different majors.{" "}
+          {/* [cite: 49] */}
+          Developed a low shock satellite separation system for ARTAM-1 Rocket.{" "}
+          {/* [cite: 48] */}
         </>
       ),
       link: {
@@ -271,12 +311,13 @@ export const RESUME_DATA = {
       techStack: [],
       description: (
         <>
-          Modelled and simulated thermal management systems for LFP batteries and heat pump dryers using MATLAB. {/* [cite: 42] */}
+          Modelled and simulated thermal management systems for LFP batteries
+          and heat pump dryers using MATLAB. {/* [cite: 42] */}
         </>
       ),
       link: {
         label: "YTU Arçelik laboratory", // [cite: 39]
-        href: "",
+        href: "https://avesis.yildiz.edu.tr/researchteamsites/arceliklab",
       },
     },
     {
@@ -285,7 +326,9 @@ export const RESUME_DATA = {
       end: "Oct 2023", // [cite: 44]
       description: (
         <>
-          Conducted research on unmanned aerial vehicles using classification machine learning algorithms for fire protection of forests. {/* [cite: 45] */}
+          Conducted research on unmanned aerial vehicles using classification
+          machine learning algorithms for fire protection of forests.{" "}
+          {/* [cite: 45] */}
         </>
       ),
       link: {
@@ -298,39 +341,29 @@ export const RESUME_DATA = {
       techStack: [],
       end: "Oct 2023",
       description: (
-        <>
-          Advocated for student needs in faculty meetings. {/* [cite: 64] */}
-        </>
+        <>Advocated for student needs in faculty meetings. {/* [cite: 64] */}</>
       ),
       link: {
         label: "Yıldız Technical University", // [cite: 31]
-        href: "",
+        href: "https://www.yildiz.edu.tr/en",
       },
     },
     {
       title: "YTU ASHRAE Turkish Chapter Student Branch Vice President", // [cite: 65]
       techStack: [],
-      description: (
-        <>
-        </>
-      ),
+      description: <></>,
       link: {
         label: "ASHRAE Turkish Chapter",
-        href: "",
+        href: "https://ashrae.org.tr/",
       },
     },
     {
       title: "MAKTEK Organization Team Member",
       techStack: [],
-      description: (
-        <>
-          Managed social media.
-          Designed posters.
-        </>
-      ),
+      description: <>Managed social media. Designed posters.</>,
       link: {
-        label: ", YTU MAKTEK",
-        href: "",
+        label: "YTU MAKTEK",
+        href: "https://www.ytumaktek.org",
       },
     },
   ],
