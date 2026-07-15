@@ -23,7 +23,7 @@ export const RESUME_DATA = {
       conferences.
     </>
   ),
-  avatarUrl: "public/biometric.jpg",
+  avatarUrl: "/biometric.jpg",
   personalWebsiteUrl: "https://www.afsharr.xyz",
   grabCadUrl: "https://grabcad.com/mohammad.afshar-4/models",
   contact: {
@@ -304,7 +304,7 @@ export const RESUME_DATA = {
         "PINN for Rocket Nose Cone Flow Prediction: A Comparative CFD Study", // [cite: 27]
       link: {
         label: "site",
-        href: "public/ICES2025.pdf",
+        href: "/ices2025-certificate.pdf",
       },
     },
     {
@@ -314,7 +314,7 @@ export const RESUME_DATA = {
         "Mathematical Modelling and Experimental Investigation of Lf280k Li-ion Batteries Cooling System with MATLAB.", // [cite: 26]
       link: {
         label: "site",
-        href: "public/ICAME2024.pdf",
+        href: "/icame-24-certificate.pdf",
       },
     },
   ],
@@ -362,7 +362,7 @@ export const RESUME_DATA = {
       ),
       link: {
         label: "TÜBİTAK", // [cite: 43]
-        href: "public/Mohammad_Afshar_tubitak_2209a_sonuc.pdf",
+        href: "/Mohammad_Afshar_tubitak_2209a_sonuc.pdf",
       },
     },
     {
