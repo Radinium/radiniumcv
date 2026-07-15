@@ -25,6 +25,7 @@ export const RESUME_DATA = {
   ),
   avatarUrl: "/biometric",
   personalWebsiteUrl: "https://www.afsharr.xyz",
+  grabCadUrl: "https://grabcad.com/mohammad.afshar-4/models",
   contact: {
     email: "afsharmohammadd@gmail.com", // [cite: 4]
     tel: "+905528748576", // [cite: 3]
