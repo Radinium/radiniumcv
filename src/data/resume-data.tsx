@@ -23,7 +23,7 @@ export const RESUME_DATA = {
       conferences.
     </>
   ),
-  avatarUrl: "/biometric",
+  avatarUrl: "public/biometric.jpg",
   personalWebsiteUrl: "https://www.afsharr.xyz",
   grabCadUrl: "https://grabcad.com/mohammad.afshar-4/models",
   contact: {
@@ -304,7 +304,7 @@ export const RESUME_DATA = {
         "PINN for Rocket Nose Cone Flow Prediction: A Comparative CFD Study", // [cite: 27]
       link: {
         label: "site",
-        href: "/ICES2025.pdf",
+        href: "public/ICES2025.pdf",
       },
     },
     {
@@ -314,7 +314,7 @@ export const RESUME_DATA = {
         "Mathematical Modelling and Experimental Investigation of Lf280k Li-ion Batteries Cooling System with MATLAB.", // [cite: 26]
       link: {
         label: "site",
-        href: "/ICAME2024.pdf",
+        href: "public/ICAME2024.pdf",
       },
     },
   ],
@@ -347,7 +347,7 @@ export const RESUME_DATA = {
       ),
       link: {
         label: "YTU Arçelik laboratory", // [cite: 39]
-        href: "https://avesis.yildiz.edu.tr/researchteamsites/arceliklab",
+        href: "",
       },
     },
     {
@@ -362,7 +362,7 @@ export const RESUME_DATA = {
       ),
       link: {
         label: "TÜBİTAK", // [cite: 43]
-        href: "https://tubitak.gov.tr/tr/burslar/lisans-onlisans/destek-programlari/2209-universite-ogrencileri-arastirma-projeleri-destekleme-programi",
+        href: "public/Mohammad_Afshar_tubitak_2209a_sonuc.pdf",
       },
     },
     {
