@@ -1,4 +1,10 @@
-import { DownloadIcon, GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import {
+  BoxIcon,
+  DownloadIcon,
+  GlobeIcon,
+  MailIcon,
+  PhoneIcon,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { RESUME_DATA } from "@/data/resume-data";
@@ -62,6 +68,22 @@ function DownloadCVButton() {
       >
         <DownloadIcon className="size-4" aria-hidden="true" />
         Download CV
+      </a>
+    </Button>
+  );
+}
+
+function GrabCADButton() {
+  return (
+    <Button className="mt-2 gap-2 print:hidden" variant="outline" asChild>
+      <a
+        href={RESUME_DATA.grabCadUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View GrabCAD models (opens in new tab)"
+      >
+        <BoxIcon className="size-4" aria-hidden="true" />
+        GrabCAD
       </a>
     </Button>
   );
@@ -184,7 +206,10 @@ export function Header() {
           personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
         />
 
-        <DownloadCVButton />
+        <div className="flex flex-wrap gap-2">
+          <DownloadCVButton />
+          <GrabCADButton />
+        </div>
 
         <PrintContact
           contact={RESUME_DATA.contact}

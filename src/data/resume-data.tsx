@@ -29,6 +29,7 @@ export const RESUME_DATA = {
   ),
   avatarUrl: "/biometric.jpg",
   personalWebsiteUrl: "https://www.linkedin.com/in/mhmdafshar/",
+  grabCadUrl: "https://grabcad.com/mohammad.afshar-4/models",
   contact: {
     email: "afsharmohammadd@gmail.com", // [cite: 4]
     tel: "+905392381869", // [cite: 3]
@@ -129,6 +130,14 @@ export const RESUME_DATA = {
           Thesis subject: &quot;Physics-Informed Neural Networks for Rocket Nose
           Cone Flow Prediction: Experimental & computational and machine
           learning approaches&quot;. {/*  */}
+          <br />
+          GPA: 2.9/4
+          <br />
+          Coursework: thermodynamics, heat transfer, fluid dynamics, vibrations,
+          strength of materials, dynamics; plus C programming, calculus, linear
+          algebra, differential equations, statistics, numerical analysis, and
+          finite element methods.
+          <br />
           <br />
           GPA: 2.9/4
           <br />
