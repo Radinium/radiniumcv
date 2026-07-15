@@ -1,4 +1,10 @@
-import { DownloadIcon, GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import {
+  BoxIcon,
+  DownloadIcon,
+  GlobeIcon,
+  MailIcon,
+  PhoneIcon,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { RESUME_DATA } from "@/data/resume-data";
@@ -33,7 +39,12 @@ interface SocialButtonProps {
 
 function SocialButton({ href, icon: Icon, label }: SocialButtonProps) {
   return (
-    <Button className="size-8 text-slate-800 hover:text-blue-900" variant="outline" size="icon" asChild>
+    <Button
+      className="size-8 text-slate-800 hover:text-blue-900"
+      variant="outline"
+      size="icon"
+      asChild
+    >
       <a
         href={href}
         aria-label={label}
@@ -57,6 +68,22 @@ function DownloadCVButton() {
       >
         <DownloadIcon className="size-4" aria-hidden="true" />
         Download CV
+      </a>
+    </Button>
+  );
+}
+
+function GrabCADButton() {
+  return (
+    <Button className="mt-2 gap-2 print:hidden" variant="outline" asChild>
+      <a
+        href={RESUME_DATA.grabCadUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View GrabCAD models (opens in new tab)"
+      >
+        <BoxIcon className="size-4" aria-hidden="true" />
+        GrabCAD
       </a>
     </Button>
   );
@@ -121,7 +148,7 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
       {personalWebsiteUrl && (
         <>
           <a
-            className="underline text-slate-800 hover:text-blue-900"
+            className="text-slate-800 underline hover:text-blue-900"
             href={personalWebsiteUrl}
           >
             {new URL(personalWebsiteUrl).hostname}
@@ -132,7 +159,7 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
       {contact.email && (
         <>
           <a
-            className="underline text-slate-800 hover:text-blue-900"
+            className="text-slate-800 underline hover:text-blue-900"
             href={`mailto:${contact.email}`}
           >
             {contact.email}
@@ -142,7 +169,7 @@ function PrintContact({ contact, personalWebsiteUrl }: PrintContactProps) {
       )}
       {contact.tel && (
         <a
-          className="underline text-slate-800 hover:text-blue-900"
+          className="text-slate-800 underline hover:text-blue-900"
           href={`tel:${contact.tel}`}
         >
           {contact.tel}
@@ -179,7 +206,10 @@ export function Header() {
           personalWebsiteUrl={RESUME_DATA.personalWebsiteUrl}
         />
 
-        <DownloadCVButton />
+        <div className="flex flex-wrap gap-2">
+          <DownloadCVButton />
+          <GrabCADButton />
+        </div>
 
         <PrintContact
           contact={RESUME_DATA.contact}
