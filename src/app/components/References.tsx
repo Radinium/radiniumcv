@@ -16,6 +16,14 @@ interface ReferenceLinkProps {
   link?: string;
 }
 
+function getPrintableLink(link: string) {
+  if (link.startsWith("mailto:")) {
+    return link.replace("mailto:", "");
+  }
+
+  return link.replace("https://", "").replace("www.", "").replace(/\/$/, "");
+}
+
 /**
  * Renders Reference title with optional link and status indicator
  */
@@ -30,7 +38,7 @@ function ReferenceLink({ title, link }: ReferenceLinkProps) {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 text-slate-800 hover:text-blue-800 hover:underline transition-colors"
+        className="inline-flex items-center gap-1 text-slate-800 transition-colors hover:text-blue-800 hover:underline"
         aria-label={`${title} Reference (opens in new tab)`}
       >
         {title}
@@ -43,7 +51,7 @@ function ReferenceLink({ title, link }: ReferenceLinkProps) {
         className="hidden font-mono text-xs underline print:visible"
         aria-hidden="true"
       >
-        {link.replace("https://", "").replace("www.", "").replace("/", "")}
+        {getPrintableLink(link)}
       </div>
     </>
   );
@@ -91,7 +99,7 @@ interface ReferenceCardProps {
 function ReferenceCard({ title, description, tags, link }: ReferenceCardProps) {
   return (
     <Card
-      className="flex h-full flex-col overflow-hidden border p-3 hover:-translate-y-1 hover:shadow-md transition-all duration-300"
+      className="flex h-full flex-col overflow-hidden border p-3 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
       role="article"
     >
       <CardHeader>
