@@ -12,27 +12,22 @@ import { BoxIcon } from "lucide-react";
 export const RESUME_DATA = {
   name: "Mohammad Afshar", // [cite: 1]
   initials: "MA",
-  location: "Istanbul, Turkey",
-  locationLink: "https://www.google.com/maps/place/Istanbul",
-  about: "Mechanical Engineer - CAE/CFD / R&D", // [cite: 2]
+  location: "Istanbul / Eskişehir, Türkiye",
+  locationLink: "https://www.google.com/maps/place/T%C3%BCrkiye",
+  about: "Mechanical Engineer – CAE / CFD / R&D", // [cite: 2]
   summary: (
     <>
-      Mechanical Engineer specializing in computational engineering, CAE, and
-      simulation-driven R&D. {/* [cite: 7] */}
-      Strong background in CFD, FEA, thermal management, and Python-based
-      modelling, with experience on application of Machine Learning to
-      engineering problems. {/* [cite: 8] */}
-      Published author in peer-reviewed national journals and international
-      conferences. Seeking a Design, CAE, or R&D Engineer role.{" "}
-      {/* [cite: 9] */}
+      Mechanical Engineer specializing in computational engineering. Background
+      in CFD & Python-based modelling, with experience in ML engineering
+      applications. Published in national journals and international
+      conferences.
     </>
   ),
   avatarUrl: "/biometric.jpg",
-  personalWebsiteUrl: "https://www.linkedin.com/in/mhmdafshar/",
-  grabCadUrl: "https://grabcad.com/mohammad.afshar-4/models",
+  personalWebsiteUrl: "https://www.afsharr.xyz",
   contact: {
     email: "afsharmohammadd@gmail.com", // [cite: 4]
-    tel: "+905392381869", // [cite: 3]
+    tel: "+905528748576", // [cite: 3]
     social: [
       {
         name: "GitHub",
@@ -56,18 +51,22 @@ export const RESUME_DATA = {
       company: "Teknosis",
       link: "https://www.teknosistem.com.tr/",
       badges: [],
-      title: "Design Engineer (Contract)",
+      title: "Design Engineer",
       logo: null,
       start: "Mar 2026",
       end: "Present",
       description: (
         <>
-          Designed and optimized CNC machine components, utilizing automated
-          geometry generation and iterative FEA loops to achieve optimal
-          mass-to-stress ratios.
+          Engineered functional 3D solid manufacturing assemblies from 2D
+          drawings for CNC machine tool components, including spindle
+          assemblies, tool turrets, lathe chucks, and tailstocks.
           <br />
-          Performed iterative design evaluations to balance production
-          feasibility with cost and structural performance.
+          Conducted Design for Manufacturing (DFM) reviews and generated CAM
+          toolpaths, aligning components to CNC machining capabilities and
+          reducing production costs.
+          <br />
+          Trained technicians on workflows and programming for legacy CNC
+          equipment, improving production efficiency.
         </>
       ),
     },
@@ -96,8 +95,17 @@ export const RESUME_DATA = {
       end: "Jan 2026",
       description: (
         <>
-          Managed technical documentation and cross-referenced engineering
-          drawings for a 1,000-ton steel project.
+          Produced 2D fabrication and erection drawings for a 1,000-ton heavy
+          structural steel project using Tekla Structures and AutoCAD,
+          translating structural frameworks into manufacturing instructions.
+          <br />
+          Generated Bills of Materials (BOMs) and technical documentation,
+          cross-referencing structural drawings to ensure material traceability
+          and prevent costly procurement errors.
+          <br />
+          Conducted on-floor quality control inspections of welded steel
+          assemblies, verifying structural tolerances and weld compliance
+          against engineering drawings prior to final site erection.
         </>
       ),
     },
@@ -105,39 +113,38 @@ export const RESUME_DATA = {
       company: "Beko", //
       link: "https://www.beko.com.tr",
       badges: [],
-      title: "R&D Engineering Intern", // [cite: 22]
+      title: "R&D Intern", // [cite: 22]
       logo: null,
       start: "Jul 2024", // [cite: 23]
       end: "Aug 2024", // [cite: 23]
       description: (
         <>
-          Developed a multidomain (air & refrigerant) simulation model for a
-          heat pump tumble dryer using Python, improving performance prediction
-          accuracy by ~87%. {/*  */}
+          Developed a multidomain simulation model for a heat pump tumble dryer
+          using Python, improving performance prediction accuracy by ~87%.{" "}
+          {/*  */}
         </>
       ),
     },
   ],
   education: [
     {
+      school: "Istanbul Technical University",
+      link: "https://www.itu.edu.tr/en",
+      degree: "M.Sc., Mechanical Engineering",
+      start: "Jul 2026",
+      end: "Present",
+      description: <>Heat & Fluid Program</>,
+    },
+    {
       school: "Yıldız Technical University", // [cite: 31]
       link: "https://www.yildiz.edu.tr/en",
-      degree: "B.Eng., Mechanical Engineering", // [cite: 30]
+      degree: "B.Sc., Mechanical Engineering", // [cite: 30]
       start: "Oct 2021", // [cite: 32]
       end: "Jul 2025", // [cite: 32]
       description: (
         <>
-          Thesis subject: &quot;Physics-Informed Neural Networks for Rocket Nose
-          Cone Flow Prediction: Experimental & computational and machine
-          learning approaches&quot;. {/*  */}
-          <br />
-          GPA: 2.9/4
-          <br />
-          Coursework: thermodynamics, heat transfer, fluid dynamics, vibrations,
-          strength of materials, dynamics; plus C programming, calculus, linear
-          algebra, differential equations, statistics, numerical analysis, and
-          finite element methods.
-          <br />
+          Thesis subject: &quot;PINN for Nose Cone Flow Prediction: Exp. & Comp.
+          & ML approaches&quot;. {/*  */}
           <br />
           GPA: 2.9/4
           <br />
@@ -181,11 +188,13 @@ export const RESUME_DATA = {
         "Computational Fluid Dynamics (CFD)",
         "Finite Element Analysis (FEA)",
         "Thermal Management Simulation",
+        "CalculiX",
       ],
     },
     {
       category: "Design & Manufacturing (CAD/CAM)",
       items: [
+        "NX",
         "SolidWorks",
         "Autodesk Inventor",
         "HYPERMILL",
@@ -199,7 +208,6 @@ export const RESUME_DATA = {
       items: [
         "Python (Advanced)",
         "C++",
-        "C",
         "Machine Learning (PINNs)",
         "Scientific Computing",
         "Data Analysis",
@@ -268,15 +276,14 @@ export const RESUME_DATA = {
     {
       title: "Journal of Engineering Sciences and Design", //
       techStack: [],
-      description:
-        "Trajectory Modelling for High-Power Rockets Using MATLAB/Simulink", //
+      description: "Trajectory Modelling for H-P Rockets Using MATLAB", //
       link: {
         label: "DOI",
         href: "https://doi.org/10.21923/jesd.1653290", //
       },
     },
     {
-      title: "3rd International Conference of Energy Systems", // [cite: 27]
+      title: "ICES2025 ISTANBUL", // [cite: 27]
       techStack: [],
       description:
         "Physics-Informed Neural Networks for Rocket Nose Cone Flow Prediction: A Comparative CFD Study", // [cite: 27]
@@ -350,7 +357,10 @@ export const RESUME_DATA = {
       techStack: [],
       end: "Oct 2023",
       description: (
-        <>Advocated for student needs in faculty meetings. {/* [cite: 64] */}</>
+        <>
+          Served as YTU Mechanical Engineering section representative for 2
+          years. {/* [cite: 64] */}
+        </>
       ),
       link: {
         label: "Yıldız Technical University", // [cite: 31]
